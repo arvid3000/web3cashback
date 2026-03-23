@@ -7,23 +7,31 @@ import { Link } from "react-router-dom"
 export function Hero() {
   return (
     <div className="px-8 pt-6 pb-0 bg-background max-w-6xl mx-auto">
-      <div className="relative rounded-2xl overflow-hidden border border-white/10 md:aspect-[85.6/48]">
+      <div className="relative rounded-2xl overflow-hidden border border-white/10 md:aspect-[85.6/48] flex flex-col">
         <GradientBg />
 
-        {/* Mini nav inside hero */}
-        <div className="relative z-10 flex items-center justify-between px-14 pt-5">
-          <Link to="/">
-            <img src="/w3c-logo.svg" alt="Web3Cashback" className="h-6" style={{ filter: 'brightness(0) invert(1)' }} />
-          </Link>
-          <Button variant="outline" size="sm" className="text-white border-white/40 hover:bg-white/10 hover:text-white bg-transparent">
-            Sign Up
-          </Button>
-        </div>
+        {/* Coin — absolutely positioned, right side */}
+        <img
+          src="/coin.png"
+          alt="Coin"
+          className="hidden md:block absolute right-0 bottom-0 w-[55%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[15%] translate-y-[22%] z-0"
+        />
 
-        {/* Hero content — absolutely fills remaining space */}
-        <div className="relative z-10 px-14 md:absolute md:inset-0 md:flex md:items-center">
-          {/* Text — left half */}
-          <div className="md:w-1/2 py-8 md:py-0">
+        {/* Inner layout: nav top, text bottom */}
+        <div className="relative z-10 flex flex-col flex-1 justify-between px-10">
+
+          {/* Top nav */}
+          <div className="flex items-center justify-between pt-6">
+            <Link to="/">
+              <img src="/w3c-logo.svg" alt="Web3Cashback" className="h-6" style={{ filter: 'brightness(0) invert(1)' }} />
+            </Link>
+            <Button variant="outline" size="sm" className="text-white border-white/40 hover:bg-white/10 hover:text-white bg-transparent">
+              Sign Up
+            </Button>
+          </div>
+
+          {/* Text — anchored to bottom */}
+          <div className="md:w-1/2 pb-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
               <span style={headingAccent}>Earn crypto</span>{" "}
               <span style={headingBase}>on every bet, trade &amp; transaction</span>
@@ -39,12 +47,6 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Coin — right side, absolutely positioned so it doesn't affect layout */}
-          <img
-            src="/coin.png"
-            alt="Coin"
-            className="hidden md:block absolute right-0 bottom-0 w-[55%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[15%] translate-y-[22%]"
-          />
         </div>
       </div>
     </div>
