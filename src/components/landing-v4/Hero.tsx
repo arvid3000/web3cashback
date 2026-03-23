@@ -22,7 +22,7 @@ export function Hero() {
 
         {/* Hero content */}
         <div className="relative z-10 px-14 pt-4 pb-0">
-          <div className="grid md:grid-cols-2 gap-10 items-end">
+          <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-end">
             <div className="pb-12">
               <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
                 <span style={headingAccent}>Earn crypto</span>{" "}
@@ -43,7 +43,7 @@ export function Hero() {
               <img
                 src="/coin.png"
                 alt="Coin"
-                className="w-[115%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[8%] translate-y-[12%]"
+                className="w-[130%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[18%] translate-y-[12%]"
               />
             </div>
           </div>
