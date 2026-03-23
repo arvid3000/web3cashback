@@ -63,15 +63,15 @@ const offers: Offer[] = [
   },
 ]
 
-const cardBorder = "border-t-[hsl(235,50%,82%)]"
-const badge = "bg-[hsl(235,60%,95%)] text-[#4A52B8] border border-[hsl(235,50%,82%)]"
+const cardBorder = "border-t-black"
+const badge = "bg-black text-white border border-black"
 
 export function Offers() {
   return (
     <section className="border-b">
       <div className="container py-14 md:py-16">
         <div className="mb-8">
-          <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-2">Available Offers</p>
+          <p className="text-sm font-semibold text-foreground uppercase tracking-widest mb-2">Available Offers</p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">Start earning cashback today</h2>
         </div>
 
@@ -85,7 +85,7 @@ export function Offers() {
               )}
             >
               {offer.popular && (
-                <div className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-[#4A52B8]/10 px-2.5 py-1 text-[11px] font-medium text-[#4A52B8]">
+                <div className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-black px-2.5 py-1 text-[11px] font-medium text-white">
                   ⭐ Popular
                 </div>
               )}
@@ -99,7 +99,7 @@ export function Offers() {
                   </span>
                 </div>
                 <h3 className="font-bold text-base mb-0.5 text-foreground">{offer.name}</h3>
-                <p className="text-xl text-[#4A52B8] mb-3">
+                <p className="text-xl text-foreground mb-3">
                   {offer.cashback.replace(' cashback', '')}{' '}
                   <span style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400 }}>cashback</span>
                 </p>
