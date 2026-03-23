@@ -11,7 +11,7 @@ export function Hero() {
         <GradientBg />
 
         {/* Mini nav inside hero */}
-        <div className="relative z-10 flex items-center justify-between px-14 pt-10">
+        <div className="relative z-10 flex items-center justify-between px-14 pt-8">
           <Link to="/">
             <img src="/w3c-logo.svg" alt="Web3Cashback" className="h-6" style={{ filter: 'brightness(0) invert(1)' }} />
           </Link>
@@ -21,9 +21,9 @@ export function Hero() {
         </div>
 
         {/* Hero content */}
-        <div className="relative z-10 px-14 py-10 md:py-16">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
+        <div className="relative z-10 px-14 pt-8 pb-0">
+          <div className="grid md:grid-cols-2 gap-10 items-end">
+            <div className="pb-12">
               <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
                 <span style={headingAccent}>Earn crypto</span>{" "}
                 <span style={headingBase}>on every bet, trade &amp; transaction</span>
@@ -39,11 +39,11 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="relative flex items-end justify-end overflow-visible">
+            <div className="relative flex items-end justify-end">
               <img
                 src="/coin.png"
                 alt="Coin"
-                className="w-[120%] max-w-none object-contain drop-shadow-2xl animate-float translate-y-[22%] translate-x-[10%]"
+                className="w-[115%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[8%] translate-y-[12%]"
               />
             </div>
           </div>
