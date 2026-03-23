@@ -74,27 +74,27 @@ const offers: Offer[] = [
 
 const categoryStyles: Record<Category, { topBorder: string; badge: string; avatar: string; label: string }> = {
   casino: {
-    topBorder: "border-t-[hsl(271,80%,85%)]",
-    badge: "bg-[hsl(271,100%,96%)] text-[#9B3FF0] border border-[hsl(271,80%,85%)]",
-    avatar: "bg-[#9B3FF0]",
+    topBorder: "border-t-[hsl(235,50%,82%)]",
+    badge: "bg-[hsl(235,60%,95%)] text-[#4A52B8] border border-[hsl(235,50%,82%)]",
+    avatar: "bg-[#4A52B8]",
     label: "Casino",
   },
   exchange: {
-    topBorder: "border-t-[hsl(235,50%,78%)]",
-    badge: "bg-[hsl(235,60%,94%)] text-[#4A52B8] border border-[hsl(235,50%,78%)]",
+    topBorder: "border-t-[hsl(235,50%,82%)]",
+    badge: "bg-[hsl(235,60%,95%)] text-[#4A52B8] border border-[hsl(235,50%,82%)]",
     avatar: "bg-[#4A52B8]",
     label: "Exchange",
   },
   defi: {
-    topBorder: "border-t-[hsl(142,71%,73%)]",
-    badge: "bg-[hsl(139,76%,93%)] text-[hsl(142,72%,30%)] border border-[hsl(142,71%,73%)]",
-    avatar: "bg-[hsl(142,72%,36%)]",
+    topBorder: "border-t-[hsl(235,50%,82%)]",
+    badge: "bg-[hsl(235,60%,95%)] text-[#4A52B8] border border-[hsl(235,50%,82%)]",
+    avatar: "bg-[#4A52B8]",
     label: "DeFi",
   },
   wallet: {
-    topBorder: "border-t-[hsl(186,94%,69%)]",
-    badge: "bg-[hsl(183,100%,90%)] text-[hsl(192,91%,30%)] border border-[hsl(186,94%,69%)]",
-    avatar: "bg-[hsl(192,91%,36%)]",
+    topBorder: "border-t-[hsl(235,50%,82%)]",
+    badge: "bg-[hsl(235,60%,95%)] text-[#4A52B8] border border-[hsl(235,50%,82%)]",
+    avatar: "bg-[#4A52B8]",
     label: "Wallet",
   },
 }

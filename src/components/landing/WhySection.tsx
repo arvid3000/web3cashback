@@ -28,14 +28,14 @@ const cashbackTiers = [
   { name: "Bronze", threshold: "≤ 500 USDC", reward: "Up to 10%", bg: "bg-[hsl(33,60%,93%)]", color: "text-[hsl(33,60%,50%)]" },
   { name: "Silver", threshold: "> 500 USDC", reward: "Up to 15%", bg: "bg-[hsl(218,11%,93%)]", color: "text-[hsl(218,11%,55%)]" },
   { name: "Gold", threshold: "> 2,500 USDC", reward: "Up to 20%", bg: "bg-[hsl(38,92%,93%)]", color: "text-[hsl(38,92%,45%)]" },
-  { name: "Supernova", threshold: "> 10,000 USDC", reward: "Up to 25%", bg: "bg-[hsl(271,83%,93%)]", color: "text-[#9B3FF0]" },
+  { name: "Supernova", threshold: "> 10,000 USDC", reward: "Up to 25%", bg: "bg-[hsl(235,60%,93%)]", color: "text-[#4A52B8]" },
 ]
 
 const referralTiers = [
   { name: "Bronze", rate: "20%", bg: "bg-[hsl(33,60%,93%)]" },
   { name: "Silver", rate: "25%", bg: "bg-[hsl(218,11%,93%)]" },
   { name: "Gold", rate: "30%", bg: "bg-[hsl(38,92%,93%)]" },
-  { name: "Supernova", rate: "40%", bg: "bg-[hsl(271,83%,93%)]" },
+  { name: "Supernova", rate: "40%", bg: "bg-[hsl(235,60%,93%)]" },
 ]
 
 export function WhySection() {
