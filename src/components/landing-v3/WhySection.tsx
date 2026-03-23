@@ -73,8 +73,13 @@ export function WhySection() {
                   </div>
                 </div>
               )}
-              <h3 className={`font-bold text-sm mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`}>{f.title}</h3>
-              <p className={`text-sm leading-relaxed ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
+              {f.bgImage && (
+                <div className="absolute inset-x-0 bottom-0 h-2/3 rounded-b-xl" style={{ background: 'linear-gradient(to top, #1d1854ee 60%, transparent)' }} />
+              )}
+              <div className="relative z-10">
+                <h3 className={`font-bold text-sm mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`}>{f.title}</h3>
+                <p className={`text-sm leading-relaxed ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
+              </div>
             </div>
           ))}
         </div>
