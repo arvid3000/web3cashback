@@ -107,10 +107,17 @@ export function Hero() {
                 Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
               </p>
               <div className="mt-8">
-                <Button size="lg" className="px-8 h-12 text-base">
-                  Start Earning
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <button
+                className="inline-flex items-center gap-2 px-8 h-12 rounded-xl text-white font-medium text-base transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                style={{
+                  background: 'linear-gradient(180deg, #9B3FF0 0%, #7B22D0 100%)',
+                  boxShadow: '0 0 28px rgba(155, 63, 240, 0.55), 0 0 8px rgba(155, 63, 240, 0.35), inset 0 1px 0 rgba(255,255,255,0.18)',
+                  border: '1px solid rgba(180, 100, 255, 0.45)',
+                }}
+              >
+                Start Earning
+                <ArrowRight className="h-4 w-4" />
+              </button>
               </div>
             </div>
 
