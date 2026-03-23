@@ -29,7 +29,7 @@ export function Hero() {
             <img
               src="/coin.png"
               alt="Coin"
-              className="w-full max-w-[640px] object-contain drop-shadow-2xl opacity-60"
+              className="w-full max-w-[640px] object-contain drop-shadow-2xl opacity-0"
             />
           </div>
         </div>
