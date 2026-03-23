@@ -39,11 +39,11 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="relative h-full min-h-[300px]">
+            <div className="relative flex items-end justify-end overflow-visible">
               <img
                 src="/coin.png"
                 alt="Coin"
-                className="absolute -bottom-36 -right-20 w-[580px] max-w-none object-contain drop-shadow-2xl animate-float"
+                className="w-[120%] max-w-none object-contain drop-shadow-2xl animate-float translate-y-[22%] translate-x-[10%]"
               />
             </div>
           </div>
