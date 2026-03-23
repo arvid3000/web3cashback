@@ -20,33 +20,31 @@ export function Hero() {
           </Button>
         </div>
 
-        {/* Hero content */}
-        <div className="relative z-10 px-14 pt-4 pb-0">
-          <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-end">
-            <div className="pb-12">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
-                <span style={headingAccent}>Earn crypto</span>{" "}
-                <span style={headingBase}>on every bet, trade &amp; transaction</span>
-              </h1>
-              <p className="text-white/70 mt-4 text-lg leading-relaxed max-w-lg">
-                Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
-              </p>
-              <div className="mt-8">
-                <Button size="lg" className="px-8 h-12 text-base">
-                  Start Earning
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-
-            <div className="relative flex items-end justify-end">
-              <img
-                src="/coin.png"
-                alt="Coin"
-                className="w-[160%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[22%] translate-y-[18%]"
-              />
+        {/* Hero content — absolutely fills remaining space */}
+        <div className="relative z-10 px-14 md:absolute md:inset-0 md:flex md:items-center">
+          {/* Text — left half */}
+          <div className="md:w-1/2 py-8 md:py-0">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
+              <span style={headingAccent}>Earn crypto</span>{" "}
+              <span style={headingBase}>on every bet, trade &amp; transaction</span>
+            </h1>
+            <p className="text-white/70 mt-4 text-lg leading-relaxed max-w-md">
+              Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
+            </p>
+            <div className="mt-8">
+              <Button size="lg" className="px-8 h-12 text-base">
+                Start Earning
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </div>
+
+          {/* Coin — right side, absolutely positioned so it doesn't affect layout */}
+          <img
+            src="/coin.png"
+            alt="Coin"
+            className="hidden md:block absolute right-0 bottom-0 w-[55%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[15%] translate-y-[22%]"
+          />
         </div>
       </div>
     </div>
