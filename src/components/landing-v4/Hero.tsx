@@ -26,7 +26,7 @@ export function Hero() {
       const rect = card.getBoundingClientRect()
       const x = (e.clientX - rect.left) / rect.width  - 0.5  // -0.5 to 0.5
       const y = (e.clientY - rect.top)  / rect.height - 0.5
-      card.style.transform = `perspective(1200px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`
+      card.style.transform = `perspective(1200px) rotateX(${y * 6}deg) rotateY(${-x * 6}deg)`
     }
     const onMouseLeave = () => {
       card.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg)`
