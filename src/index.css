@@ -94,6 +94,11 @@
     h1, h2, h3 {
         font-family: var(--font-heading);
     }
+    .variant-v3 h1,
+    .variant-v3 h2,
+    .variant-v3 h3 {
+        font-family: 'Inter', sans-serif;
+    }
 }
 
 /* ── Gradient background (baunov/gradients-bg) ───────────────────────── */

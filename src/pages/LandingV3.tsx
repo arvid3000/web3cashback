@@ -9,7 +9,7 @@ import { Footer } from "@/components/landing-v3/Footer"
 
 export function LandingV3() {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="variant-v3 min-h-screen flex flex-col bg-background">
       <Header />
       <main className="flex-1">
         <Hero />
