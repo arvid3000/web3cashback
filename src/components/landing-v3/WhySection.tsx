@@ -6,25 +6,29 @@ const features = [
   {
     icon: DollarSign,
     bgImage: "/smiley.jpeg",
-    title: "Transparency First",
+    titleBase: "Transparency ",
+    titleAccent: "First",
     desc: "We share exactly how we make money. Our revenue comes from partner commissions — and we pass the majority back to you.",
   },
   {
     icon: Users,
     bgImage: "/community.jpeg",
-    title: "Community-Driven",
+    titleBase: "Community-",
+    titleAccent: "Driven",
     desc: "Our loyalty and referral programs are designed so that everyone benefits. The more the community grows, the better the rewards.",
   },
   {
     icon: Shield,
     bgImage: "/shield.jpeg",
-    title: "Trust & Security",
+    titleBase: "Trust & ",
+    titleAccent: "Security",
     desc: "Every partner on our platform is vetted. We only list licensed, reputable operators so you can use our cashback links with confidence.",
   },
   {
     icon: Zap,
     bgImage: "/lightning-bold-full.jpeg",
-    title: "Aligned Incentives",
+    titleBase: "Aligned ",
+    titleAccent: "Incentives",
     desc: "We don't win unless you do. Our business model is built on sharing revenue — not selling your data or charging hidden fees.",
   },
 ]
@@ -77,7 +81,10 @@ export function WhySection() {
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #1d1854ee 40%, transparent 100%)' }} />
               )}
               <div className="relative z-10">
-                <h3 className={`font-bold text-sm mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`}>{f.title}</h3>
+                <h3 className={`text-sm mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
+                  <span style={headingBase}>{f.titleBase}</span>
+                  <span style={headingAccent}>{f.titleAccent}</span>
+                </h3>
                 <p className={`text-sm leading-relaxed ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
               </div>
             </div>
