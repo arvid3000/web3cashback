@@ -69,8 +69,8 @@ export function Offers() {
       <div className="container py-14 md:py-16">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl text-foreground">
-            <span style={playfairItalic}>Start earning </span>
-            <span style={interRegular}>cashback today</span>
+            <span style={interRegular}>Start earning cashback </span>
+            <span style={playfairItalic}>today</span>
           </h2>
         </div>
 
