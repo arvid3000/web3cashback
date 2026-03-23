@@ -10,7 +10,7 @@ export function Hero() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] tracking-tight">
-              <span style={{ color: '#a5b4fc' }}>Earn crypto back</span>{" "}
+              <span style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400 }}>Earn crypto back</span>{" "}
               on every bet, trade &amp; transaction
             </h1>
             <p className="text-white/70 mt-4 text-lg leading-relaxed max-w-lg">
