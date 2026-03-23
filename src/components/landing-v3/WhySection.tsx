@@ -1,5 +1,4 @@
 import { DollarSign, Users, Shield, Zap } from "lucide-react"
-import { useState, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
@@ -49,20 +48,8 @@ const referralTiers = [
 ]
 
 function FeatureCard({ f }: { f: typeof features[0] }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
-
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = ref.current?.getBoundingClientRect()
-    if (!rect) return
-    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top })
-  }
-
   return (
     <div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={() => setPos(null)}
       className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
       style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
     >
@@ -75,15 +62,6 @@ function FeatureCard({ f }: { f: typeof features[0] }) {
       )}
       {f.bgImage && (
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #1d1854ee 40%, transparent 100%)' }} />
-      )}
-      {/* Mouse-following radial gradient */}
-      {pos && (
-        <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-300"
-          style={{
-            background: `radial-gradient(circle 250px at ${pos.x}px ${pos.y}px, rgba(188,60,200,0.35), rgba(67,46,245,0.2) 50%, transparent 70%)`,
-          }}
-        />
       )}
       <div className="relative z-10">
         <h3 className={`text-xl mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
