@@ -76,7 +76,7 @@ function FeatureCard({ f }: { f: typeof features[0] }) {
 
 export function WhySection() {
   return (
-    <section className="border-b bg-card">
+    <section className="border-b">
       <div className="container py-16 md:py-24">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-3">Why Web3Cashback</p>

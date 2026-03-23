@@ -30,7 +30,7 @@ export function Hero() {
   }, [])
 
   return (
-    <div className="px-8 pt-6 pb-0 bg-background max-w-6xl mx-auto" ref={sectionRef}>
+    <div className="px-8 pt-6 pb-0 max-w-6xl mx-auto" ref={sectionRef}>
       <div className="relative rounded-2xl overflow-hidden border border-white/10 md:aspect-[85.6/48] flex flex-col">
 
         {/* Background layer */}
