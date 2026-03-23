@@ -5,6 +5,7 @@ import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 const features = [
   {
     icon: DollarSign,
+    bgImage: "/smiley.jpeg",
     title: "Transparency First",
     desc: "We share exactly how we make money. Our revenue comes from partner commissions — and we pass the majority back to you.",
   },
