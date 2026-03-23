@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web3Cashback — Earn crypto cashback on every bet, trade and transaction</title>
+  <meta name="description" content="Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            background: 'hsl(210,20%,98%)',
+            foreground: 'hsl(220,26%,12%)',
+            card: '#ffffff',
+            border: 'hsl(220,13%,91%)',
+            primary: 'hsl(217,91%,60%)',
+            'primary-foreground': '#ffffff',
+            muted: 'hsl(220,13%,91%)',
+            'muted-foreground': 'hsl(220,9%,46%)',
+            'tier-bronze': 'hsl(33,60%,50%)',
+            'tier-silver': 'hsl(218,11%,65%)',
+            'tier-gold': 'hsl(38,92%,50%)',
+            'tier-platinum': 'hsl(263,83%,58%)',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: hsl(210,20%,98%); color: hsl(220,26%,12%); }
+    .text-gradient {
+      background: linear-gradient(135deg, hsl(217,91%,60%) 0%, hsl(263,83%,58%) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+    .chevron { transition: transform 0.2s; }
+    .card-casino { border-top: 3px solid hsl(252,95%,85%); }
+    .card-exchange { border-top: 3px solid hsl(213,94%,78%); }
+    .card-defi { border-top: 3px solid hsl(142,71%,73%); }
+    .card-wallet { border-top: 3px solid hsl(186,94%,69%); }
+    .badge-casino { background: hsl(250,100%,95%); color: hsl(263,83%,58%); border: 1px solid hsl(252,95%,85%); }
+    .badge-exchange { background: hsl(214,95%,93%); color: hsl(217,91%,40%); border: 1px solid hsl(213,94%,78%); }
+    .badge-defi { background: hsl(139,76%,93%); color: hsl(142,72%,30%); border: 1px solid hsl(142,71%,73%); }
+    .badge-wallet { background: hsl(183,100%,90%); color: hsl(192,91%,30%); border: 1px solid hsl(186,94%,69%); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md" style="border-color: hsl(220,13%,91%);">
+    <div class="container flex h-14 items-center justify-between">
+      <a href="/" class="text-xl font-extrabold tracking-tighter" style="color: hsl(220,26%,12%);">Web3Cashback</a>
+      <button class="text-sm font-medium px-3 py-1.5 rounded-md hover:bg-gray-100 transition-colors" style="color: hsl(220,26%,12%);">My Account</button>
+    </div>
+  </header>
+
+  <main class="flex-1">
+
+    <!-- HERO -->
+    <section class="border-b" style="border-color: hsl(220,13%,91%);">
+      <div class="container py-8 md:py-11">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-5" style="border: 1px solid hsl(217,91%,80%); background: hsl(217,91%,96%); color: hsl(217,91%,45%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              Crypto Cashback Platform
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight" style="color: hsl(220,26%,12%);">
+              Earn crypto back on
+              <span class="text-gradient"> every bet, trade &amp; transaction</span>
+            </h1>
+            <p class="mt-4 text-lg leading-relaxed max-w-lg" style="color: hsl(220,9%,46%);">
+              Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
+            </p>
+            <div class="mt-8">
+              <button class="inline-flex items-center gap-2 px-8 h-12 text-base font-semibold rounded-lg text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">
+                Start Earning
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <!-- Dashboard preview placeholder -->
+            <div class="w-full max-w-[420px] rounded-2xl overflow-hidden shadow-xl" style="background: hsl(220,13%,91%); aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center;">
+              <div class="text-center p-8" style="color: hsl(220,9%,46%);">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-3 opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                <p class="text-sm opacity-60">Dashboard Preview</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVAILABLE OFFERS -->
+    <section class="border-b" style="border-color: hsl(220,13%,91%);">
+      <div class="container py-14 md:py-16">
+        <div class="mb-8">
+          <p class="text-sm font-semibold uppercase tracking-widest mb-2" style="color: hsl(217,91%,60%);">Available Offers</p>
+          <h2 class="text-2xl md:text-3xl font-extrabold" style="color: hsl(220,26%,12%);">Start earning cashback today</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <!-- LuckyHash Casino -->
+          <div class="relative rounded-xl bg-white flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 card-casino border" style="border-color: hsl(220,13%,91%);">
+            <div class="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-medium" style="background: hsl(217,91%,96%); color: hsl(217,91%,45%);">
+              ⭐ Popular
+            </div>
+            <div class="p-5 flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold text-white" style="background: hsl(263,83%,58%);">LH</div>
+                <div>
+                  <p class="text-xs font-medium mb-0.5 badge-casino inline-block px-2 py-0.5 rounded-full">Casino</p>
+                </div>
+              </div>
+              <h3 class="font-bold text-base mb-0.5" style="color: hsl(220,26%,12%);">LuckyHash Casino</h3>
+              <p class="text-xl font-extrabold mb-3" style="color: hsl(217,91%,60%);">Up to 18% cashback</p>
+              <p class="text-sm mb-4" style="color: hsl(220,9%,46%);">Provably fair games with instant crypto withdrawals. Top-rated crypto casino.</p>
+              <ul class="text-xs space-y-1 mb-4" style="color: hsl(220,9%,46%);">
+                <li>✓ Provably fair games</li>
+                <li>✓ Instant crypto withdrawals</li>
+                <li>⚠ Min. $50 deposit required</li>
+              </ul>
+            </div>
+            <div class="p-5 pt-0">
+              <button class="w-full h-9 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">Claim Cashback</button>
+            </div>
+          </div>
+
+          <!-- CryptoStake Casino -->
+          <div class="relative rounded-xl bg-white flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 card-casino border" style="border-color: hsl(220,13%,91%);">
+            <div class="p-5 flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold text-white" style="background: hsl(263,83%,50%);">CS</div>
+                <div>
+                  <p class="text-xs font-medium badge-casino inline-block px-2 py-0.5 rounded-full">Casino</p>
+                </div>
+              </div>
+              <h3 class="font-bold text-base mb-0.5" style="color: hsl(220,26%,12%);">CryptoStake Casino</h3>
+              <p class="text-xl font-extrabold mb-3" style="color: hsl(217,91%,60%);">Up to 15% cashback</p>
+              <p class="text-sm mb-4" style="color: hsl(220,9%,46%);">One of the most trusted crypto casinos with provably fair games.</p>
+              <ul class="text-xs space-y-1 mb-4" style="color: hsl(220,9%,46%);">
+                <li>✓ Mobile-first design</li>
+                <li>✓ Provably fair games</li>
+                <li>⚠ Min. $25 deposit required</li>
+              </ul>
+            </div>
+            <div class="p-5 pt-0">
+              <button class="w-full h-9 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">Claim Cashback</button>
+            </div>
+          </div>
+
+          <!-- BetChain Casino -->
+          <div class="relative rounded-xl bg-white flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 card-casino border" style="border-color: hsl(220,13%,91%);">
+            <div class="p-5 flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold text-white" style="background: hsl(263,83%,45%);">BC</div>
+                <div>
+                  <p class="text-xs font-medium badge-casino inline-block px-2 py-0.5 rounded-full">Casino</p>
+                </div>
+              </div>
+              <h3 class="font-bold text-base mb-0.5" style="color: hsl(220,26%,12%);">BetChain Casino</h3>
+              <p class="text-xl font-extrabold mb-3" style="color: hsl(217,91%,60%);">Up to 12% cashback</p>
+              <p class="text-sm mb-4" style="color: hsl(220,9%,46%);">Get up to 12% cashback on your play at BetChain Casino. Wide game selection.</p>
+              <ul class="text-xs space-y-1 mb-4" style="color: hsl(220,9%,46%);">
+                <li>✓ Wide game selection</li>
+                <li>⚠ New accounts only</li>
+                <li>⚠ Credited by the 10th monthly</li>
+              </ul>
+            </div>
+            <div class="p-5 pt-0">
+              <button class="w-full h-9 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">Claim Cashback</button>
+            </div>
+          </div>
+
+          <!-- TradeFlow Exchange -->
+          <div class="relative rounded-xl bg-white flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 card-exchange border" style="border-color: hsl(220,13%,91%);">
+            <div class="p-5 flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold text-white" style="background: hsl(217,91%,50%);">TF</div>
+                <div>
+                  <p class="text-xs font-medium badge-exchange inline-block px-2 py-0.5 rounded-full">Exchange</p>
+                </div>
+              </div>
+              <h3 class="font-bold text-base mb-0.5" style="color: hsl(220,26%,12%);">TradeFlow Exchange</h3>
+              <p class="text-xl font-extrabold mb-3" style="color: hsl(217,91%,60%);">Up to 8% cashback</p>
+              <p class="text-sm mb-4" style="color: hsl(220,9%,46%);">Get up to 8% cashback on all trading fees. Covers spot, margin, and futures trading.</p>
+              <ul class="text-xs space-y-1 mb-4" style="color: hsl(220,9%,46%);">
+                <li>✓ API trading support</li>
+                <li>✓ Institutional-grade security</li>
+                <li>⚠ KYC required · Min $500/mo volume</li>
+              </ul>
+            </div>
+            <div class="p-5 pt-0">
+              <button class="w-full h-9 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">Claim Cashback</button>
+            </div>
+          </div>
+
+          <!-- SafeHold Wallet -->
+          <div class="relative rounded-xl bg-white flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 card-wallet border" style="border-color: hsl(220,13%,91%);">
+            <div class="p-5 flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold text-white" style="background: hsl(192,91%,36%);">SH</div>
+                <div>
+                  <p class="text-xs font-medium badge-wallet inline-block px-2 py-0.5 rounded-full">Wallet</p>
+                </div>
+              </div>
+              <h3 class="font-bold text-base mb-0.5" style="color: hsl(220,26%,12%);">SafeHold Wallet</h3>
+              <p class="text-xl font-extrabold mb-3" style="color: hsl(217,91%,60%);">Up to 5% cashback</p>
+              <p class="text-sm mb-4" style="color: hsl(220,9%,46%);">Get up to 5% cashback on Pro subscription and swap fees. Monthly credit in swapped token.</p>
+              <ul class="text-xs space-y-1 mb-4" style="color: hsl(220,9%,46%);">
+                <li>✓ Multi-chain support</li>
+                <li>✓ Open-source codebase</li>
+                <li>⚠ No minimum balance required</li>
+              </ul>
+            </div>
+            <div class="p-5 pt-0">
+              <button class="w-full h-9 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">Claim Cashback</button>
+            </div>
+          </div>
+
+          <!-- DeFi Vault -->
+          <div class="relative rounded-xl bg-white flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 card-defi border" style="border-color: hsl(220,13%,91%);">
+            <div class="p-5 flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold text-white" style="background: hsl(142,72%,36%);">DV</div>
+                <div>
+                  <p class="text-xs font-medium badge-defi inline-block px-2 py-0.5 rounded-full">DeFi</p>
+                </div>
+              </div>
+              <h3 class="font-bold text-base mb-0.5" style="color: hsl(220,26%,12%);">DeFi Yield Vault</h3>
+              <p class="text-xl font-extrabold mb-3" style="color: hsl(217,91%,60%);">Up to 12% cashback</p>
+              <p class="text-sm mb-4" style="color: hsl(220,9%,46%);">Get up to 12% cashback on yield farming fees. Deposit into any supported vault and earn back automatically.</p>
+              <ul class="text-xs space-y-1 mb-4" style="color: hsl(220,9%,46%);">
+                <li>✓ Non-custodial · Audited by Certik</li>
+                <li>✓ Auto-compounding vaults</li>
+                <li>⚠ Min. $100 deposit · ETH, ARB, Base</li>
+              </ul>
+            </div>
+            <div class="p-5 pt-0">
+              <button class="w-full h-9 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">Claim Cashback</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Stats bar -->
+        <div class="mt-10 rounded-xl p-5 flex flex-wrap gap-6 justify-center" style="background: hsl(220,13%,96%);">
+          <div class="text-center">
+            <p class="text-2xl font-extrabold" style="color: hsl(220,26%,12%);">6+</p>
+            <p class="text-xs mt-0.5" style="color: hsl(220,9%,46%);">Vetted Partners</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-extrabold" style="color: hsl(220,26%,12%);">18%</p>
+            <p class="text-xs mt-0.5" style="color: hsl(220,9%,46%);">Max Cashback Rate</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-extrabold" style="color: hsl(220,26%,12%);">4</p>
+            <p class="text-xs mt-0.5" style="color: hsl(220,9%,46%);">Loyalty Tiers</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-extrabold" style="color: hsl(220,26%,12%);">$0</p>
+            <p class="text-xs mt-0.5" style="color: hsl(220,9%,46%);">Cost to You</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-extrabold" style="color: hsl(220,26%,12%);">12</p>
+            <p class="text-xs mt-0.5" style="color: hsl(220,9%,46%);">New partnerships launching</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="border-b" style="border-color: hsl(220,13%,91%);">
+      <div class="container py-16 md:py-24">
+        <div class="text-center mb-14">
+          <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color: hsl(217,91%,60%);">How It Works</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold" style="color: hsl(220,26%,12%);">Four simple steps to start earning</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div class="relative">
+            <div class="text-5xl font-black mb-3" style="color: hsl(217,91%,90%);">01</div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3 class="text-base font-bold mb-1" style="color: hsl(220,26%,12%);">Choose an Offer</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Explore cashback deals from top crypto platforms, each one vetted by our team.</p>
+          </div>
+          <div class="relative">
+            <div class="text-5xl font-black mb-3" style="color: hsl(217,91%,90%);">02</div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="text-base font-bold mb-1" style="color: hsl(220,26%,12%);">Sign Up &amp; Play</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Register through our link — tracking starts automatically. No codes needed.</p>
+          </div>
+          <div class="relative">
+            <div class="text-5xl font-black mb-3" style="color: hsl(217,91%,90%);">03</div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <h3 class="text-base font-bold mb-1" style="color: hsl(220,26%,12%);">Get Paid</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Withdraw your USDC earnings anytime — minimum 50 USDC.</p>
+          </div>
+          <div class="relative">
+            <div class="text-5xl font-black mb-3" style="color: hsl(217,91%,90%);">04</div>
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="text-base font-bold mb-1" style="color: hsl(220,26%,12%);">Refer Friends To Earn More</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Share your referral link and earn up to 40% of your friends' cashback.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY WEB3CASHBACK / LOYALTY -->
+    <section class="border-b" style="border-color: hsl(220,13%,91%); background: #fff;">
+      <div class="container py-16 md:py-24">
+        <div class="text-center mb-14">
+          <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color: hsl(217,91%,60%);">Why Web3Cashback</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold" style="color: hsl(220,26%,12%);">We're in this together</h2>
+          <p class="mt-4 max-w-xl mx-auto" style="color: hsl(220,9%,46%);">The more active you are → the more we earn → and the more you earn.</p>
+        </div>
+
+        <!-- Value props -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div class="p-5 rounded-xl border" style="border-color: hsl(220,13%,91%);">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="font-bold text-sm mb-1" style="color: hsl(220,26%,12%);">Transparency First</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">We share exactly how we make money. Our revenue comes from partner commissions — and we pass the majority back to you.</p>
+          </div>
+          <div class="p-5 rounded-xl border" style="border-color: hsl(220,13%,91%);">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="font-bold text-sm mb-1" style="color: hsl(220,26%,12%);">Community-Driven</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Our loyalty and referral programs are designed so that everyone benefits. The more the community grows, the better the rewards.</p>
+          </div>
+          <div class="p-5 rounded-xl border" style="border-color: hsl(220,13%,91%);">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="font-bold text-sm mb-1" style="color: hsl(220,26%,12%);">Trust &amp; Security</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Every partner on our platform is vetted. We only list licensed, reputable operators so you can use our cashback links with confidence.</p>
+          </div>
+          <div class="p-5 rounded-xl border" style="border-color: hsl(220,13%,91%);">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background: hsl(217,91%,96%);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="hsl(217,91%,60%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="font-bold text-sm mb-1" style="color: hsl(220,26%,12%);">Aligned Incentives</h3>
+            <p class="text-sm leading-relaxed" style="color: hsl(220,9%,46%);">We don't win unless you do. Our business model is built on sharing revenue — not selling your data or charging hidden fees.</p>
+          </div>
+        </div>
+
+        <!-- Loyalty table -->
+        <div class="mb-6 text-center">
+          <h3 class="text-lg font-bold mb-2" style="color: hsl(220,26%,12%);">More Activity → More Rewards</h3>
+          <p class="text-sm max-w-lg mx-auto mb-2" style="color: hsl(220,9%,46%);">Your status unlocks better cashback rates and referral rewards. We use the following formula:</p>
+          <p class="text-sm font-medium mb-8" style="color: hsl(220,26%,12%);">[Your cashback + your referral rewards] over the last rolling 12-month period.</p>
+        </div>
+
+        <div class="max-w-2xl mx-auto rounded-xl border overflow-hidden mb-16" style="border-color: hsl(220,13%,91%);">
+          <div class="overflow-x-auto">
+            <div style="min-width: 420px;">
+              <div class="grid grid-cols-3 text-sm font-semibold" style="background: hsl(220,13%,96%); color: hsl(220,9%,46%);">
+                <div class="px-4 py-3 border-r" style="border-color: hsl(220,13%,91%);">Status</div>
+                <div class="px-4 py-3 border-r" style="border-color: hsl(220,13%,91%);">Last 12m Rewards</div>
+                <div class="px-4 py-3">Cashback Rewards</div>
+              </div>
+              <div class="grid grid-cols-3 text-sm border-b" style="border-color: hsl(220,13%,91%);">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background: hsl(33,60%,93%);">
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="hsl(33,60%,50%)" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <span style="color: hsl(220,26%,12%);">Bronze</span>
+                </div>
+                <div class="px-4 py-3.5 border-r" style="border-color: hsl(220,13%,91%); color: hsl(220,9%,46%);">≤ 500 USDC</div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">Up to 10%</div>
+              </div>
+              <div class="grid grid-cols-3 text-sm border-b" style="border-color: hsl(220,13%,91%);">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background: hsl(218,11%,93%);">
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="hsl(218,11%,65%)" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <span style="color: hsl(220,26%,12%);">Silver</span>
+                </div>
+                <div class="px-4 py-3.5 border-r" style="border-color: hsl(220,13%,91%); color: hsl(220,9%,46%);">&gt; 500 USDC</div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">Up to 15%</div>
+              </div>
+              <div class="grid grid-cols-3 text-sm border-b" style="border-color: hsl(220,13%,91%);">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background: hsl(38,92%,93%);">
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="hsl(38,92%,50%)" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <span style="color: hsl(220,26%,12%);">Gold</span>
+                </div>
+                <div class="px-4 py-3.5 border-r" style="border-color: hsl(220,13%,91%); color: hsl(220,9%,46%);">&gt; 2,500 USDC</div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">Up to 20%</div>
+              </div>
+              <div class="grid grid-cols-3 text-sm">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background: hsl(263,83%,93%);">
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="hsl(263,83%,58%)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  </div>
+                  <span style="color: hsl(220,26%,12%);">Supernova</span>
+                </div>
+                <div class="px-4 py-3.5 border-r" style="border-color: hsl(220,13%,91%); color: hsl(220,9%,46%);">&gt; 10,000 USDC</div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">Up to 25%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Referral section -->
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-extrabold mb-3" style="color: hsl(220,26%,12%);">Refer your friends to earn more</h3>
+          <p class="max-w-lg mx-auto" style="color: hsl(220,9%,46%);">Earn up to 40% referral rewards based on your friends' cashback. The higher your status, the bigger your rewards.</p>
+        </div>
+
+        <div class="max-w-md mx-auto rounded-xl border overflow-hidden" style="border-color: hsl(220,13%,91%);">
+          <div class="overflow-x-auto">
+            <div style="min-width: 320px;">
+              <div class="grid grid-cols-2 text-sm font-semibold" style="background: hsl(220,13%,96%); color: hsl(220,9%,46%);">
+                <div class="px-4 py-3 border-r" style="border-color: hsl(220,13%,91%);">Status</div>
+                <div class="px-4 py-3">Referral Rewards</div>
+              </div>
+              <div class="grid grid-cols-2 text-sm border-b" style="border-color: hsl(220,13%,91%);">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-5 h-5 rounded-full" style="background: hsl(33,60%,93%);"></div>
+                  <span style="color: hsl(220,26%,12%);">Bronze</span>
+                </div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">20%</div>
+              </div>
+              <div class="grid grid-cols-2 text-sm border-b" style="border-color: hsl(220,13%,91%);">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-5 h-5 rounded-full" style="background: hsl(218,11%,93%);"></div>
+                  <span style="color: hsl(220,26%,12%);">Silver</span>
+                </div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">25%</div>
+              </div>
+              <div class="grid grid-cols-2 text-sm border-b" style="border-color: hsl(220,13%,91%);">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-5 h-5 rounded-full" style="background: hsl(38,92%,93%);"></div>
+                  <span style="color: hsl(220,26%,12%);">Gold</span>
+                </div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">30%</div>
+              </div>
+              <div class="grid grid-cols-2 text-sm">
+                <div class="px-4 py-3.5 border-r flex items-center gap-2 font-semibold" style="border-color: hsl(220,13%,91%);">
+                  <div class="w-5 h-5 rounded-full" style="background: hsl(263,83%,93%);"></div>
+                  <span style="color: hsl(220,26%,12%);">Supernova</span>
+                </div>
+                <div class="px-4 py-3.5 font-medium" style="color: hsl(220,26%,12%);">40%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="border-b" style="border-color: hsl(220,13%,91%);">
+      <div class="container py-16 md:py-24">
+        <div class="text-center mb-10">
+          <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color: hsl(217,91%,60%);">FAQ</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold" style="color: hsl(220,26%,12%);">Frequently asked questions</h2>
+        </div>
+        <div class="max-w-2xl mx-auto space-y-0">
+
+          <details class="border-b" style="border-color: hsl(220,13%,91%);">
+            <summary class="flex items-center justify-between py-4 font-semibold text-left" style="color: hsl(220,26%,12%);">
+              How does Web3Cashback make money?
+              <svg class="chevron h-4 w-4 flex-shrink-0 ml-3" style="color: hsl(220,9%,46%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="pb-4 text-sm leading-relaxed" style="color: hsl(220,9%,46%);">We earn a revenue share from our partner platforms when you sign up through us. Instead of keeping all of it, we pass the majority back to you as cashback. We win when you win.</p>
+          </details>
+
+          <details class="border-b" style="border-color: hsl(220,13%,91%);">
+            <summary class="flex items-center justify-between py-4 font-semibold text-left" style="color: hsl(220,26%,12%);">
+              How is cashback calculated?
+              <svg class="chevron h-4 w-4 flex-shrink-0 ml-3" style="color: hsl(220,9%,46%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="pb-4 text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Cashback is based on real revenue generated from your activity — not deposits. The exact rate depends on the partner and your loyalty tier. Everything is transparently shown in your dashboard.</p>
+          </details>
+
+          <details class="border-b" style="border-color: hsl(220,13%,91%);">
+            <summary class="flex items-center justify-between py-4 font-semibold text-left" style="color: hsl(220,26%,12%);">
+              When do I get paid?
+              <svg class="chevron h-4 w-4 flex-shrink-0 ml-3" style="color: hsl(220,9%,46%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="pb-4 text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Cashback is credited monthly in USDC. You can withdraw anytime — minimum 50 USDC, no waiting periods.</p>
+          </details>
+
+          <details class="border-b" style="border-color: hsl(220,13%,91%);">
+            <summary class="flex items-center justify-between py-4 font-semibold text-left" style="color: hsl(220,26%,12%);">
+              Do I need to do anything special to start earning?
+              <svg class="chevron h-4 w-4 flex-shrink-0 ml-3" style="color: hsl(220,9%,46%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="pb-4 text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Just sign up through one of our partner links. Tracking starts automatically — no promo codes or forms needed.</p>
+          </details>
+
+          <details class="border-b" style="border-color: hsl(220,13%,91%);">
+            <summary class="flex items-center justify-between py-4 font-semibold text-left" style="color: hsl(220,26%,12%);">
+              Are more platforms and verticals coming?
+              <svg class="chevron h-4 w-4 flex-shrink-0 ml-3" style="color: hsl(220,9%,46%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="pb-4 text-sm leading-relaxed" style="color: hsl(220,9%,46%);">Yes! We're actively expanding to cover more exchanges, DeFi protocols, and new verticals. Stay tuned for announcements.</p>
+          </details>
+
+          <details>
+            <summary class="flex items-center justify-between py-4 font-semibold text-left" style="color: hsl(220,26%,12%);">
+              What is the loyalty program?
+              <svg class="chevron h-4 w-4 flex-shrink-0 ml-3" style="color: hsl(220,9%,46%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="pb-4 text-sm leading-relaxed" style="color: hsl(220,9%,46%);">The more you earn through Web3Cashback (your own cashback + referral rewards), the higher your status climbs. Higher status means boosted cashback rates and bigger referral percentages.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section style="background: #fff;">
+      <div class="container py-20 md:py-28 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="color: hsl(220,26%,12%);">Ready to start earning?</h2>
+        <p class="mb-10 max-w-lg mx-auto text-lg" style="color: hsl(220,9%,46%);">Browse our vetted cashback offers and start getting paid back today.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button class="inline-flex items-center gap-2 px-8 h-12 text-base font-semibold rounded-lg text-white transition-all hover:opacity-90" style="background: hsl(217,91%,60%);">
+            Start Earning
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <a href="/about" class="inline-flex items-center h-12 px-6 text-base font-semibold rounded-lg border transition-all hover:bg-gray-50" style="border-color: hsl(220,13%,91%); color: hsl(220,26%,12%);">
+            Learn More About Web3Cashback
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t" style="border-color: hsl(220,13%,91%); background: #fff;">
+    <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-sm" style="color: hsl(220,9%,46%);">© 2026 Web3Cashback</p>
+      <nav class="flex items-center gap-5">
+        <a href="/terms" class="text-sm hover:opacity-80 transition-opacity" style="color: hsl(220,9%,46%);">Terms</a>
+        <a href="/privacy" class="text-sm hover:opacity-80 transition-opacity" style="color: hsl(220,9%,46%);">Privacy</a>
+        <a href="/about" class="text-sm hover:opacity-80 transition-opacity" style="color: hsl(220,9%,46%);">About</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
