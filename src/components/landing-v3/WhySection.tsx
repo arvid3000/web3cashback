@@ -1,5 +1,6 @@
 import { DollarSign, Users, Shield, Zap } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
 const features = [
   {
@@ -44,7 +45,10 @@ export function WhySection() {
       <div className="container py-16 md:py-24">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-3">Why Web3Cashback</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">We're in this together</h2>
+          <h2 className="text-3xl md:text-4xl text-foreground" style={headingWrap}>
+            <span style={headingBase}>We're in this </span>
+            <span style={headingAccent}>together</span>
+          </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
             The more active you are → the more we earn → and the more you earn.
           </p>
