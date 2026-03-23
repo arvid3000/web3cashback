@@ -1,4 +1,5 @@
 import { Search, UserPlus, CreditCard, Users } from "lucide-react"
+import { GradientBg } from "@/components/GradientBg"
 
 const steps = [
   {
@@ -29,21 +30,22 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="border-b">
-      <div className="container py-16 md:py-24">
+    <section className="relative border-b overflow-hidden">
+      <GradientBg />
+      <div className="relative z-10 container py-16 md:py-24">
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-3">How It Works</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">Four simple steps to start earning</h2>
+          <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-3">How It Works</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white">Four simple steps to start earning</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {steps.map((step) => (
             <div key={step.num} className="relative">
-              <div className="text-5xl font-black text-[#4A52B8]/10 mb-3">{step.num}</div>
-              <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center mb-3">
-                <step.icon className="h-5 w-5 text-[#4A52B8]" />
+              <div className="text-5xl font-black text-white/10 mb-3">{step.num}</div>
+              <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-3">
+                <step.icon className="h-5 w-5 text-white/80" />
               </div>
-              <h3 className="text-base font-bold text-foreground mb-1">{step.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+              <h3 className="text-base font-bold text-white mb-1">{step.title}</h3>
+              <p className="text-sm text-white/60 leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>
