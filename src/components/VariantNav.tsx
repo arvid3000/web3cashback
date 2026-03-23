@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 const variants = [
   { path: "/", label: "V1" },
   { path: "/v2", label: "V2" },
+  { path: "/v3", label: "V3" },
 ]
 
 export function VariantNav() {
