@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 export function Hero() {
   return (
-    <div className="px-4 pt-4 pb-0 bg-background">
+    <div className="px-8 pt-6 pb-0 bg-background max-w-6xl mx-auto">
       <div className="relative rounded-2xl overflow-hidden border border-white/10">
         <GradientBg />
 
