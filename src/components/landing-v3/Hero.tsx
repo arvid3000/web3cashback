@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative border-b overflow-hidden">
       <GradientBg />
-      <div className="relative z-10 container py-10 md:py-14">
+      <div className="relative z-10 container py-6 md:py-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
