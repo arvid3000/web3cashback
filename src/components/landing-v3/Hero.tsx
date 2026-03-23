@@ -25,13 +25,12 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div className="w-full max-w-[420px] aspect-[4/3] rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white/50">
-              <div className="text-center">
-                <div className="text-5xl mb-2 opacity-30">📊</div>
-                <p className="text-sm opacity-50">Dashboard Preview</p>
-              </div>
-            </div>
+          <div className="flex items-center justify-center relative">
+            <img
+              src="/coin.png"
+              alt="Coin"
+              className="w-full max-w-[480px] object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>
