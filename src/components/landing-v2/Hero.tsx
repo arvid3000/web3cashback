@@ -1,17 +1,19 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { GradientBg } from "@/components/GradientBg"
 
 export function Hero() {
   return (
-    <section className="border-b">
-      <div className="container py-8 md:py-11">
+    <section className="relative border-b overflow-hidden">
+      <GradientBg />
+      <div className="relative z-10 container py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-[1.1] tracking-tight">
-              <span style={{ color: '#4A52B8' }}>Earn crypto back</span>{" "}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] tracking-tight">
+              <span style={{ color: '#a5b4fc' }}>Earn crypto back</span>{" "}
               on every bet, trade &amp; transaction
             </h1>
-            <p className="text-muted-foreground mt-4 text-lg leading-relaxed max-w-lg">
+            <p className="text-white/70 mt-4 text-lg leading-relaxed max-w-lg">
               Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
             </p>
             <div className="mt-8">
@@ -23,7 +25,7 @@ export function Hero() {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="w-full max-w-[420px] aspect-[4/3] rounded-2xl bg-muted flex items-center justify-center text-muted-foreground">
+            <div className="w-full max-w-[420px] aspect-[4/3] rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white/50">
               <div className="text-center">
                 <div className="text-5xl mb-2 opacity-30">📊</div>
                 <p className="text-sm opacity-50">Dashboard Preview</p>
