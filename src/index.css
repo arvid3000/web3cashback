@@ -37,7 +37,7 @@
     --cta-purple: #9B3FF0;     /* CTAs / primary actions */
     --accent-blue: #4A52B8;    /* Accents, labels, highlights */
 
-    --background: hsl(210, 20%, 98%);
+    --background: #f7f7f7;
     --foreground: hsl(220, 26%, 12%);
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(220, 26%, 12%);
