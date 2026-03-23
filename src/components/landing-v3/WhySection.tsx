@@ -63,11 +63,11 @@ export function WhySection() {
         </div>
 
         {/* Value props */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="group/grid grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {features.map((f) => (
             <div
               key={f.titleBase}
-              className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
+              className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end transition-transform duration-300 group-hover/grid:scale-95 hover:!scale-110"
               style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
             >
               {!f.bgImage && (
