@@ -20,7 +20,7 @@ const features = [
   },
   {
     icon: Zap,
-    image: "/lightning-bolt.png",
+    bgImage: "/lightning-bold-full.jpeg",
     title: "Aligned Incentives",
     desc: "We don't win unless you do. Our business model is built on sharing revenue — not selling your data or charging hidden fees.",
   },
@@ -58,15 +58,20 @@ export function WhySection() {
         {/* Value props */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {features.map((f) => (
-            <div key={f.title} className="p-5 rounded-xl border">
-              <div className="mb-3">
-                {f.image
-                  ? <img src={f.image} alt={f.title} className="w-16 h-16 object-contain" />
-                  : <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center"><f.icon className="h-5 w-5 text-[#4A52B8]" /></div>
-                }
-              </div>
-              <h3 className="font-bold text-sm mb-1 text-foreground">{f.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+            <div
+              key={f.title}
+              className="p-5 rounded-xl border relative overflow-hidden"
+              style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
+            >
+              {!f.bgImage && (
+                <div className="mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center">
+                    <f.icon className="h-5 w-5 text-[#4A52B8]" />
+                  </div>
+                </div>
+              )}
+              <h3 className={`font-bold text-sm mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`}>{f.title}</h3>
+              <p className={`text-sm leading-relaxed ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
             </div>
           ))}
         </div>
