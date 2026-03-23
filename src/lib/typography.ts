@@ -26,7 +26,7 @@ export const headingBase: CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontStyle: "normal",
   fontWeight: 400,
-  letterSpacing: "normal",
+  letterSpacing: "-0.02em",
 }
 
 export const headingWrap: CSSProperties = {
