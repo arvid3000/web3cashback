@@ -12,8 +12,8 @@ export function Hero() {
               Crypto Cashback Platform
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-[1.1] tracking-tight">
-              Earn crypto back on{" "}
-              <span style={{ color: '#4A52B8' }}>every bet, trade &amp; transaction</span>
+              <span style={{ color: '#4A52B8' }}>Earn crypto</span>{" "}
+              back on every bet, trade &amp; transaction
             </h1>
             <p className="text-muted-foreground mt-4 text-lg leading-relaxed max-w-lg">
               Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
