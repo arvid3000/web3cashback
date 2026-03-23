@@ -114,8 +114,7 @@ export function Hero() {
                   border: '1px solid rgba(180, 100, 255, 0.45)',
                 }}
               >
-                <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, letterSpacing: '-0.02em' }}>Start </span>
-                <span style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400, letterSpacing: 0 }}>Earning</span>
+                Start Earning
                 <ArrowRight className="h-4 w-4" />
               </button>
               </div>
