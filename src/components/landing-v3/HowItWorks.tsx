@@ -48,7 +48,7 @@ export function HowItWorks() {
               <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-3">
                 <step.icon className="h-5 w-5 text-white/80" />
               </div>
-              <h3 className="text-base font-bold text-white mb-1">{step.title}</h3>
+              <h3 className="text-base text-white mb-1" style={headingBase}>{step.title}</h3>
               <p className="text-sm text-white/60 leading-relaxed">{step.desc}</p>
             </div>
           ))}
