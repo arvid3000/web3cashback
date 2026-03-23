@@ -68,7 +68,7 @@ export function Offers() {
     <section className="border-b">
       <div className="container py-14 md:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl text-foreground">
+          <h2 className="text-2xl md:text-3xl text-foreground" style={{ letterSpacing: 'normal' }}>
             <span style={interRegular}>Start earning cashback </span>
             <span style={playfairItalic}>today</span>
           </h2>
