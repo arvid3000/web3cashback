@@ -1,4 +1,4 @@
-import { Zap, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
@@ -7,13 +7,9 @@ export function Hero() {
       <div className="container py-8 md:py-11">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#4A52B8]/20 bg-[#4A52B8]/5 px-4 py-1.5 text-sm font-medium text-[#4A52B8] mb-5">
-              <Zap className="h-3.5 w-3.5" />
-              Crypto Cashback Platform
-            </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-[1.1] tracking-tight">
-              <span style={{ color: '#4A52B8' }}>Earn crypto</span>{" "}
-              back on every bet, trade &amp; transaction
+              <span style={{ color: '#4A52B8' }}>Earn crypto back</span>{" "}
+              on every bet, trade &amp; transaction
             </h1>
             <p className="text-muted-foreground mt-4 text-lg leading-relaxed max-w-lg">
               Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
