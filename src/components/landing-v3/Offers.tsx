@@ -90,8 +90,8 @@ export function Offers() {
                   <span style={headingBase}>{offer.cashback.replace(' cashback', '')} </span>
                   <span style={headingAccent}>cashback</span>
                 </p>
-                <p className="text-sm text-muted-foreground mb-4" style={headingBase}>{offer.desc}</p>
-                <ul className="text-xs text-muted-foreground space-y-1 mb-4" style={headingBase}>
+                <p className="text-sm text-muted-foreground mb-4">{offer.desc}</p>
+                <ul className="text-xs text-muted-foreground space-y-1 mb-4">
                   {offer.features.map((f) => <li key={f}>✓ {f}</li>)}
                   <li>⚠ {offer.note}</li>
                 </ul>
@@ -112,8 +112,8 @@ export function Offers() {
             ))}
           </div>
           <div>
-            <p className="text-sm font-semibold text-foreground" style={headingBase}>100+ brands coming soon</p>
-            <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1" style={headingBase}>
+            <p className="text-sm font-semibold text-foreground">100+ brands coming soon</p>
+            <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               New crypto partnerships launching within the next 12 months
             </p>
