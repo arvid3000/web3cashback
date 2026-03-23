@@ -32,7 +32,7 @@ export function Hero() {
 
           {/* Text — anchored to bottom */}
           <div className="md:w-1/2">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1]" style={headingWrap}>
               <span style={headingAccent}>Earn crypto</span>{" "}
               <span style={headingBase}>on every bet, trade &amp; transaction</span>
             </h1>
