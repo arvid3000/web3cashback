@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative border-b overflow-hidden">
       <GradientBg />
-      <div className="relative z-10 container py-16 md:py-24">
+      <div className="relative z-10 container py-10 md:py-14">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
@@ -25,11 +25,11 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center relative">
+          <div className="relative flex items-end justify-center overflow-visible">
             <img
               src="/coin.png"
               alt="Coin"
-              className="w-full max-w-[640px] object-contain drop-shadow-2xl opacity-100"
+              className="w-[720px] max-w-none object-contain drop-shadow-2xl translate-y-10"
             />
           </div>
         </div>
