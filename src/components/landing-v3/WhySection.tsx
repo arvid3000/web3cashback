@@ -67,7 +67,7 @@ export function WhySection() {
           {features.map((f) => (
             <div
               key={f.titleBase}
-              className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end transition-transform duration-300 group-hover/grid:scale-95 hover:!scale-110"
+              className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end transition-transform duration-300 group-hover/grid:scale-[0.97] hover:!scale-105"
               style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
             >
               {!f.bgImage && (
