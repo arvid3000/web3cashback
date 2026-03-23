@@ -3,22 +3,22 @@ import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
 const steps = [
   {
-    num: "01",
+    num: "1",
     title: "Choose an Offer",
     desc: "Explore cashback deals from top crypto platforms, each one vetted by our team.",
   },
   {
-    num: "02",
+    num: "2",
     title: "Sign Up & Play",
     desc: "Register through our link — tracking starts automatically. No codes needed.",
   },
   {
-    num: "03",
+    num: "3",
     title: "Get Paid",
     desc: "Withdraw your USDC earnings anytime — minimum 50 USDC.",
   },
   {
-    num: "04",
+    num: "4",
     title: "Refer Friends To Earn More",
     desc: "Share your referral link and earn up to 40% of your friends' cashback.",
   },
