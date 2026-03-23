@@ -40,7 +40,7 @@ export function HowItWorks() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {steps.map((step) => (
             <div key={step.num} className="relative">
-              <div className="text-5xl font-black text-white/10 mb-3">{step.num}</div>
+              <div className="text-5xl font-black text-white/10 mb-3" style={{ fontFamily: "'Funnel Display', sans-serif" }}>{step.num}</div>
               <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-3">
                 <step.icon className="h-5 w-5 text-white/80" />
               </div>
