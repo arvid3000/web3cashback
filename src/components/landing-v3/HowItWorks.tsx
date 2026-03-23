@@ -39,7 +39,7 @@ export function HowItWorks() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {steps.map((step) => (
             <div key={step.num} className="relative flex items-start gap-4">
-              <div className="text-9xl text-white/10 leading-none shrink-0 -mt-4" style={headingAccent}>{step.num}</div>
+              <div className="text-9xl text-white/10 shrink-0" style={{ ...headingAccent, lineHeight: 1, marginTop: '-0.15em' }}>{step.num}</div>
               <div>
                 <h3 className="text-base text-white mb-1" style={headingBase}>{step.title}</h3>
                 <p className="text-sm text-white/60 leading-relaxed">{step.desc}</p>
