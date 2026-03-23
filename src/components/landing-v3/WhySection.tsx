@@ -15,6 +15,7 @@ const features = [
   },
   {
     icon: Shield,
+    bgImage: "/shield.jpeg",
     title: "Trust & Security",
     desc: "Every partner on our platform is vetted. We only list licensed, reputable operators so you can use our cashback links with confidence.",
   },
