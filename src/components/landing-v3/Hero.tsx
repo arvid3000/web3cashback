@@ -9,7 +9,7 @@ export function Hero() {
       <div className="relative z-10 container py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-[1.1] tracking-tight">
               <span style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400 }}>Earn crypto back</span>{" "}
               on every bet, trade &amp; transaction
             </h1>
