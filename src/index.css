@@ -101,6 +101,16 @@
     }
 }
 
+/* ── Floating animation ───────────────────────────────────────────────── */
+@keyframes float {
+  0%   { transform: translateY(40px); }
+  50%  { transform: translateY(20px); }
+  100% { transform: translateY(40px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
 /* ── Gradient background (baunov/gradients-bg) ───────────────────────── */
 @keyframes moveInCircle {
   0%   { transform: rotate(0deg); }
