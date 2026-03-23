@@ -63,7 +63,7 @@ export function WhySection() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="p-5 rounded-xl border relative overflow-hidden"
+              className="p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
               style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
             >
               {!f.bgImage && (
