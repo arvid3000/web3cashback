@@ -11,6 +11,7 @@ const features = [
   },
   {
     icon: Users,
+    bgImage: "/community.jpeg",
     title: "Community-Driven",
     desc: "Our loyalty and referral programs are designed so that everyone benefits. The more the community grows, the better the rewards.",
   },
