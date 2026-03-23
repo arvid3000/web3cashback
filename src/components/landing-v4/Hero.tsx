@@ -43,7 +43,7 @@ export function Hero() {
               <img
                 src="/coin.png"
                 alt="Coin"
-                className="absolute -bottom-16 -right-20 w-[580px] max-w-none object-contain drop-shadow-2xl animate-float"
+                className="absolute -bottom-36 -right-20 w-[580px] max-w-none object-contain drop-shadow-2xl animate-float"
               />
             </div>
           </div>
