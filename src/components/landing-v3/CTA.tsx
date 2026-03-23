@@ -12,11 +12,11 @@ export function CTA() {
           Browse our vetted cashback offers and start getting paid back today.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Button size="lg" className="px-8 h-12 text-base" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', letterSpacing: 0 }}>
+          <Button size="lg" className="px-8 h-12 text-base">
             Start Earning
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button variant="outline" size="lg" className="h-12 text-base border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', letterSpacing: 0 }}>
+          <Button variant="outline" size="lg" className="h-12 text-base border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent">
             Learn More About Web3Cashback
           </Button>
         </div>
