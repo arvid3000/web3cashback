@@ -7,7 +7,7 @@ export function Hero() {
       <div className="container py-8 md:py-11">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary mb-5">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#4A52B8]/20 bg-[#4A52B8]/5 px-4 py-1.5 text-sm font-medium text-[#4A52B8] mb-5">
               <Zap className="h-3.5 w-3.5" />
               Crypto Cashback Platform
             </div>

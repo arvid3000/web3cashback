@@ -32,7 +32,7 @@ export function FAQ() {
     <section className="border-b">
       <div className="container py-16 md:py-24">
         <div className="text-center mb-10">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">FAQ</p>
+          <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-3">FAQ</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">Frequently asked questions</h2>
         </div>
         <div className="max-w-2xl mx-auto">

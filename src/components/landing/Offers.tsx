@@ -112,7 +112,7 @@ export function Offers() {
     <section className="border-b">
       <div className="container py-14 md:py-16">
         <div className="mb-8">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">Available Offers</p>
+          <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-2">Available Offers</p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">Start earning cashback today</h2>
         </div>
 
@@ -128,7 +128,7 @@ export function Offers() {
                 )}
               >
                 {offer.popular && (
-                  <div className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-medium text-primary">
+                  <div className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-[#4A52B8]/10 px-2.5 py-1 text-[11px] font-medium text-[#4A52B8]">
                     ⭐ Popular
                   </div>
                 )}
@@ -142,7 +142,7 @@ export function Offers() {
                     </span>
                   </div>
                   <h3 className="font-bold text-base mb-0.5 text-foreground">{offer.name}</h3>
-                  <p className="text-xl font-extrabold text-primary mb-3">{offer.cashback}</p>
+                  <p className="text-xl font-extrabold text-[#4A52B8] mb-3">{offer.cashback}</p>
                   <p className="text-sm text-muted-foreground mb-4">{offer.desc}</p>
                   <ul className="text-xs text-muted-foreground space-y-1 mb-4">
                     {offer.features.map((f) => <li key={f}>✓ {f}</li>)}

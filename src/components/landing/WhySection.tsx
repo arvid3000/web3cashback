@@ -43,7 +43,7 @@ export function WhySection() {
     <section className="border-b bg-card">
       <div className="container py-16 md:py-24">
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Why Web3Cashback</p>
+          <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-3">Why Web3Cashback</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">We're in this together</h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
             The more active you are → the more we earn → and the more you earn.
@@ -54,8 +54,8 @@ export function WhySection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {features.map((f) => (
             <div key={f.title} className="p-5 rounded-xl border">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
-                <f.icon className="h-5 w-5 text-primary" />
+              <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center mb-3">
+                <f.icon className="h-5 w-5 text-[#4A52B8]" />
               </div>
               <h3 className="font-bold text-sm mb-1 text-foreground">{f.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
