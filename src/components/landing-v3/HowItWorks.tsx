@@ -1,29 +1,24 @@
-import { Search, UserPlus, CreditCard, Users } from "lucide-react"
 import { GradientBg } from "@/components/GradientBg"
 import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
 const steps = [
   {
     num: "01",
-    icon: Search,
     title: "Choose an Offer",
     desc: "Explore cashback deals from top crypto platforms, each one vetted by our team.",
   },
   {
     num: "02",
-    icon: UserPlus,
     title: "Sign Up & Play",
     desc: "Register through our link — tracking starts automatically. No codes needed.",
   },
   {
     num: "03",
-    icon: CreditCard,
     title: "Get Paid",
     desc: "Withdraw your USDC earnings anytime — minimum 50 USDC.",
   },
   {
     num: "04",
-    icon: Users,
     title: "Refer Friends To Earn More",
     desc: "Share your referral link and earn up to 40% of your friends' cashback.",
   },
@@ -45,9 +40,6 @@ export function HowItWorks() {
           {steps.map((step) => (
             <div key={step.num} className="relative">
               <div className="text-5xl text-white/10 mb-3" style={headingAccent}>{step.num}</div>
-              <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-3">
-                <step.icon className="h-5 w-5 text-white/80" />
-              </div>
               <h3 className="text-base text-white mb-1" style={headingBase}>{step.title}</h3>
               <p className="text-sm text-white/60 leading-relaxed">{step.desc}</p>
             </div>
