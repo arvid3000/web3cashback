@@ -22,7 +22,7 @@ export function Hero() {
 
       if (bgRef.current)      bgRef.current.style.transform      = `translateY(${scrolled * 0.15}px)`
       if (contentRef.current) contentRef.current.style.transform = `translateY(${scrolled * 0.07}px)`
-      if (coinRef.current)    coinRef.current.style.transform    = `translate(25%, calc(35% + ${scrolled * 0.25}px))`
+      if (coinRef.current)    coinRef.current.style.transform    = `translate(8%, calc(12% + ${scrolled * 0.25}px))`
     }
 
     window.addEventListener("scroll", onScroll, { passive: true })
@@ -44,7 +44,7 @@ export function Hero() {
           src="/coin.png"
           alt="Coin"
           className="hidden md:block absolute right-0 bottom-0 w-[55%] max-w-none object-contain drop-shadow-2xl animate-float will-change-transform"
-          style={{ transform: 'translate(25%, 35%)' }}
+          style={{ transform: 'translate(8%, 12%)' }}
         />
 
         {/* Content layer — slowest parallax */}
