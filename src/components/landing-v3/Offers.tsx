@@ -89,7 +89,7 @@ export function Offers() {
                   <div className="w-10 h-10 rounded-lg bg-[#111] flex items-center justify-center overflow-hidden">
                     <img src={offer.logo} alt={offer.name} className="w-8 h-8 object-contain" />
                   </div>
-                  <span className={cn("text-xs font-medium px-2 py-0.5 rounded-full", badge)}>
+                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${badge}`}>
                     Casino
                   </span>
                 </div>
