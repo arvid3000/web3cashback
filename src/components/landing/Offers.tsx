@@ -74,15 +74,15 @@ const offers: Offer[] = [
 
 const categoryStyles: Record<Category, { topBorder: string; badge: string; avatar: string; label: string }> = {
   casino: {
-    topBorder: "border-t-[hsl(252,95%,85%)]",
-    badge: "bg-[hsl(250,100%,95%)] text-[hsl(263,83%,58%)] border border-[hsl(252,95%,85%)]",
-    avatar: "bg-[hsl(263,83%,58%)]",
+    topBorder: "border-t-[hsl(271,80%,85%)]",
+    badge: "bg-[hsl(271,100%,96%)] text-[#9B3FF0] border border-[hsl(271,80%,85%)]",
+    avatar: "bg-[#9B3FF0]",
     label: "Casino",
   },
   exchange: {
-    topBorder: "border-t-[hsl(213,94%,78%)]",
-    badge: "bg-[hsl(214,95%,93%)] text-[hsl(217,91%,40%)] border border-[hsl(213,94%,78%)]",
-    avatar: "bg-[hsl(217,91%,50%)]",
+    topBorder: "border-t-[hsl(235,50%,78%)]",
+    badge: "bg-[hsl(235,60%,94%)] text-[#4A52B8] border border-[hsl(235,50%,78%)]",
+    avatar: "bg-[#4A52B8]",
     label: "Exchange",
   },
   defi: {

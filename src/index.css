@@ -33,29 +33,33 @@
 }
 
 :root {
+    /* Brand colours */
+    --cta-blue: #4A52B8;       /* CTAs / primary actions */
+    --accent-purple: #9B3FF0;  /* Accents, labels, highlights */
+
     --background: hsl(210, 20%, 98%);
     --foreground: hsl(220, 26%, 12%);
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(220, 26%, 12%);
     --popover: hsl(0, 0%, 100%);
     --popover-foreground: hsl(220, 26%, 12%);
-    --primary: hsl(217, 91%, 60%);
+    --primary: #4A52B8;
     --primary-foreground: hsl(0, 0%, 100%);
-    --secondary: hsl(220, 13%, 91%);
+    --secondary: hsl(240, 15%, 93%);
     --secondary-foreground: hsl(220, 26%, 12%);
-    --muted: hsl(220, 13%, 91%);
-    --muted-foreground: hsl(220, 9%, 46%);
-    --accent: hsl(220, 13%, 91%);
-    --accent-foreground: hsl(220, 26%, 12%);
+    --muted: hsl(240, 15%, 93%);
+    --muted-foreground: hsl(240, 9%, 46%);
+    --accent: #9B3FF0;
+    --accent-foreground: hsl(0, 0%, 100%);
     --destructive: hsl(0, 72%, 51%);
-    --border: hsl(220, 13%, 91%);
-    --input: hsl(220, 13%, 91%);
-    --ring: hsl(217, 91%, 60%);
+    --border: hsl(240, 13%, 91%);
+    --input: hsl(240, 13%, 91%);
+    --ring: #4A52B8;
     --radius: 0.5rem;
 
-    /* Category colours */
-    --casino: hsl(263, 83%, 58%);
-    --exchange: hsl(217, 91%, 60%);
+    /* Category colours — all using accent purple */
+    --casino: #9B3FF0;
+    --exchange: #4A52B8;
     --defi: hsl(142, 72%, 36%);
     --wallet: hsl(192, 91%, 36%);
 
@@ -63,17 +67,17 @@
     --tier-bronze: hsl(33, 60%, 50%);
     --tier-silver: hsl(218, 11%, 65%);
     --tier-gold: hsl(38, 92%, 50%);
-    --tier-platinum: hsl(263, 83%, 58%);
+    --tier-platinum: #9B3FF0;
     --tier-bronze-bg: hsl(33, 60%, 93%);
     --tier-silver-bg: hsl(218, 11%, 93%);
     --tier-gold-bg: hsl(38, 92%, 93%);
-    --tier-platinum-bg: hsl(263, 83%, 93%);
+    --tier-platinum-bg: hsl(271, 83%, 93%);
 
     /* Category bg/border */
-    --casino-bg: hsl(250, 100%, 95%);
-    --casino-border: hsl(252, 95%, 85%);
-    --exchange-bg: hsl(214, 95%, 93%);
-    --exchange-border: hsl(213, 94%, 78%);
+    --casino-bg: hsl(271, 100%, 96%);
+    --casino-border: hsl(271, 80%, 85%);
+    --exchange-bg: hsl(235, 60%, 94%);
+    --exchange-border: hsl(235, 50%, 78%);
     --defi-bg: hsl(139, 76%, 93%);
     --defi-border: hsl(142, 71%, 73%);
     --wallet-bg: hsl(183, 100%, 90%);
@@ -94,7 +98,7 @@
 
 @layer utilities {
     .text-gradient {
-        background: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(263, 83%, 58%) 100%);
+        background: linear-gradient(135deg, #4A52B8 0%, #9B3FF0 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
