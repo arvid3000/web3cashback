@@ -67,7 +67,7 @@ export function WhySection() {
           {features.map((f) => (
             <div
               key={f.titleBase}
-              className="p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
+              className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
               style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
             >
               {!f.bgImage && (
@@ -85,7 +85,7 @@ export function WhySection() {
                   <span style={headingBase}>{f.titleBase}</span>
                   <span style={headingAccent}>{f.titleAccent}</span>
                 </h3>
-                <p className={`text-sm leading-relaxed ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
+                <p className={`text-sm leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-300 ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
               </div>
             </div>
           ))}
