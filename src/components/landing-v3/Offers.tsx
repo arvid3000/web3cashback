@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
 
 interface Offer {
   logo: string
@@ -63,7 +62,6 @@ const offers: Offer[] = [
   },
 ]
 
-const cardBorder = "border-t-black"
 const badge = "bg-black text-white border border-black"
 
 export function Offers() {
@@ -79,10 +77,7 @@ export function Offers() {
           {offers.map((offer) => (
             <div
               key={offer.name}
-              className={cn(
-                "relative rounded-xl bg-card flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 border border-t-[3px]",
-                cardBorder
-              )}
+              className="relative rounded-xl bg-card flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 border border-border"
             >
               {offer.popular && (
                 <div className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-black px-2.5 py-1 text-[11px] font-medium text-white">
