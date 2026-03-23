@@ -11,7 +11,7 @@ export function Hero() {
         <GradientBg />
 
         {/* Mini nav inside hero */}
-        <div className="relative z-10 flex items-center justify-between px-6 pt-5">
+        <div className="relative z-10 flex items-center justify-between px-14 pt-10">
           <Link to="/">
             <img src="/w3c-logo.svg" alt="Web3Cashback" className="h-6" style={{ filter: 'brightness(0) invert(1)' }} />
           </Link>
@@ -21,7 +21,7 @@ export function Hero() {
         </div>
 
         {/* Hero content */}
-        <div className="relative z-10 container py-6 md:py-8">
+        <div className="relative z-10 px-14 py-10 md:py-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
