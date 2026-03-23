@@ -142,10 +142,7 @@ export function Offers() {
                     </span>
                   </div>
                   <h3 className="font-bold text-base mb-0.5 text-foreground">{offer.name}</h3>
-                  <p className="text-xl font-extrabold text-[#4A52B8] mb-3">
-                    {offer.cashback.replace(' cashback', '')}{' '}
-                    <span style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>cashback</span>
-                  </p>
+                  <p className="text-xl text-[#4A52B8] mb-3" style={{ fontFamily: "'Playfair Display', serif", fontWeight: 400 }}>{offer.cashback}</p>
                   <p className="text-sm text-muted-foreground mb-4">{offer.desc}</p>
                   <ul className="text-xs text-muted-foreground space-y-1 mb-4" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
                     {offer.features.map((f) => <li key={f}>✓ {f}</li>)}
