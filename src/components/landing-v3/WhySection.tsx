@@ -81,7 +81,7 @@ function FeatureCard({ f }: { f: typeof features[0] }) {
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-300"
           style={{
-            background: `radial-gradient(circle 120px at ${pos.x}px ${pos.y}px, rgba(188,60,200,0.35), rgba(67,46,245,0.2) 50%, transparent 70%)`,
+            background: `radial-gradient(circle 250px at ${pos.x}px ${pos.y}px, rgba(188,60,200,0.35), rgba(67,46,245,0.2) 50%, transparent 70%)`,
           }}
         />
       )}
