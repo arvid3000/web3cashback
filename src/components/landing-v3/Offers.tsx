@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
 interface Offer {
   logo: string
@@ -60,17 +61,15 @@ const offers: Offer[] = [
   },
 ]
 
-const interRegular: React.CSSProperties = { fontFamily: "'Inter', sans-serif", fontWeight: 400 }
-const playfairItalic: React.CSSProperties = { fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400 }
 
 export function Offers() {
   return (
     <section className="border-b">
       <div className="container py-14 md:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl text-foreground" style={{ letterSpacing: 'normal' }}>
-            <span style={interRegular}>Start earning cashback </span>
-            <span style={playfairItalic}>today</span>
+          <h2 className="text-2xl md:text-3xl text-foreground" style={headingWrap}>
+            <span style={headingBase}>Start earning cashback </span>
+            <span style={headingAccent}>today</span>
           </h2>
         </div>
 
@@ -86,13 +85,13 @@ export function Offers() {
                     <img src={offer.logo} alt={offer.name} className="w-8 h-8 object-contain" />
                   </div>
                 </div>
-                <h3 className="text-base mb-0.5 text-foreground" style={interRegular}>{offer.name}</h3>
+                <h3 className="text-base mb-0.5 text-foreground" style={headingBase}>{offer.name}</h3>
                 <p className="text-xl text-foreground mb-3">
-                  <span style={interRegular}>{offer.cashback.replace(' cashback', '')} </span>
-                  <span style={playfairItalic}>cashback</span>
+                  <span style={headingBase}>{offer.cashback.replace(' cashback', '')} </span>
+                  <span style={headingAccent}>cashback</span>
                 </p>
-                <p className="text-sm text-muted-foreground mb-4" style={interRegular}>{offer.desc}</p>
-                <ul className="text-xs text-muted-foreground space-y-1 mb-4" style={interRegular}>
+                <p className="text-sm text-muted-foreground mb-4" style={headingBase}>{offer.desc}</p>
+                <ul className="text-xs text-muted-foreground space-y-1 mb-4" style={headingBase}>
                   {offer.features.map((f) => <li key={f}>✓ {f}</li>)}
                   <li>⚠ {offer.note}</li>
                 </ul>
@@ -113,8 +112,8 @@ export function Offers() {
             ))}
           </div>
           <div>
-            <p className="text-sm font-semibold text-foreground" style={interRegular}>100+ brands coming soon</p>
-            <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1" style={interRegular}>
+            <p className="text-sm font-semibold text-foreground" style={headingBase}>100+ brands coming soon</p>
+            <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1" style={headingBase}>
               <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               New crypto partnerships launching within the next 12 months
             </p>

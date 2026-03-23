@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { GradientBg } from "@/components/GradientBg"
+import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
 export function Hero() {
   return (
@@ -9,9 +10,9 @@ export function Hero() {
       <div className="relative z-10 container py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-[1.1] tracking-tight">
-              <span style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400, letterSpacing: 0 }}>Earn crypto</span>{" "}
-              on every bet, trade &amp; transaction
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
+              <span style={headingAccent}>Earn crypto</span>{" "}
+              <span style={headingBase}>on every bet, trade &amp; transaction</span>
             </h1>
             <p className="text-white/70 mt-4 text-lg leading-relaxed max-w-lg">
               Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
