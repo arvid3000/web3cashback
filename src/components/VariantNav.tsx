@@ -5,6 +5,7 @@ const variants = [
   { path: "/", label: "V1" },
   { path: "/v2", label: "V2" },
   { path: "/v3", label: "V3" },
+  { path: "/v4", label: "V4" },
 ]
 
 export function VariantNav() {

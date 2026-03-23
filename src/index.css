@@ -99,6 +99,11 @@
     .variant-v3 h3 {
         font-family: 'Inter', sans-serif;
     }
+    .variant-v4 h1,
+    .variant-v4 h2,
+    .variant-v4 h3 {
+        font-family: 'Inter', sans-serif;
+    }
 }
 
 /* ── Floating animation ───────────────────────────────────────────────── */
