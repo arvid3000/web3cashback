@@ -1,4 +1,5 @@
 import { DollarSign, Users, Shield, Zap } from "lucide-react"
+import { useState, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
@@ -47,6 +48,54 @@ const referralTiers = [
   { name: "Supernova", rate: "40%", bg: "bg-[hsl(235,60%,93%)]" },
 ]
 
+function FeatureCard({ f }: { f: typeof features[0] }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
+
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    const rect = ref.current?.getBoundingClientRect()
+    if (!rect) return
+    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+  }
+
+  return (
+    <div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => setPos(null)}
+      className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
+      style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
+    >
+      {!f.bgImage && (
+        <div className="mb-3">
+          <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center">
+            <f.icon className="h-5 w-5 text-[#4A52B8]" />
+          </div>
+        </div>
+      )}
+      {f.bgImage && (
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #1d1854ee 40%, transparent 100%)' }} />
+      )}
+      {/* Mouse-following radial gradient */}
+      {pos && (
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+          style={{
+            background: `radial-gradient(circle 120px at ${pos.x}px ${pos.y}px, rgba(188,60,200,0.35), rgba(67,46,245,0.2) 50%, transparent 70%)`,
+          }}
+        />
+      )}
+      <div className="relative z-10">
+        <h3 className={`text-xl mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
+          <span style={headingBase}>{f.titleBase}</span>
+          <span style={headingAccent}>{f.titleAccent}</span>
+        </h3>
+        <p className={`text-sm leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-500 ease-out ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
+      </div>
+    </div>
+  )
+}
+
 export function WhySection() {
   return (
     <section className="border-b bg-card">
@@ -64,31 +113,7 @@ export function WhySection() {
 
         {/* Value props */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {features.map((f) => (
-            <div
-              key={f.titleBase}
-              className="group p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
-              style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
-            >
-              {!f.bgImage && (
-                <div className="mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center">
-                    <f.icon className="h-5 w-5 text-[#4A52B8]" />
-                  </div>
-                </div>
-              )}
-              {f.bgImage && (
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #1d1854ee 40%, transparent 100%)' }} />
-              )}
-              <div className="relative z-10">
-                <h3 className={`text-xl mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
-                  <span style={headingBase}>{f.titleBase}</span>
-                  <span style={headingAccent}>{f.titleAccent}</span>
-                </h3>
-                <p className={`text-sm leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-500 ease-out ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
-              </div>
-            </div>
-          ))}
+          {features.map((f) => <FeatureCard key={f.titleBase} f={f} />)}
         </div>
 
         {/* Loyalty table */}
