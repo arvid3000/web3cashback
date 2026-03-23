@@ -1,26 +1,15 @@
-import { Header } from "@/components/landing/Header"
-import { Hero } from "@/components/landing/Hero"
-import { Offers } from "@/components/landing/Offers"
-import { HowItWorks } from "@/components/landing/HowItWorks"
-import { WhySection } from "@/components/landing/WhySection"
-import { FAQ } from "@/components/landing/FAQ"
-import { CTA } from "@/components/landing/CTA"
-import { Footer } from "@/components/landing/Footer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { LandingV1 } from "@/pages/LandingV1"
+import { LandingV2 } from "@/pages/LandingV2"
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <Offers />
-        <HowItWorks />
-        <WhySection />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingV1 />} />
+        <Route path="/v2" element={<LandingV2 />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
