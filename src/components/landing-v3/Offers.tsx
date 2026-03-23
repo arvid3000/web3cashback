@@ -81,8 +81,8 @@ export function Offers() {
             >
               <div className="p-5 flex-1">
                 <div className="mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#111] flex items-center justify-center overflow-hidden">
-                    <img src={offer.logo} alt={offer.name} className="w-8 h-8 object-contain" />
+                  <div className="w-16 h-16 rounded-xl bg-[#111] flex items-center justify-center overflow-hidden">
+                    <img src={offer.logo} alt={offer.name} className="w-12 h-12 object-contain" />
                   </div>
                 </div>
                 <h3 className="text-base mb-0.5 text-foreground" style={headingBase}>{offer.name}</h3>
