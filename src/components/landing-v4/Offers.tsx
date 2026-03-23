@@ -61,49 +61,58 @@ const offers: Offer[] = [
   },
 ]
 
+function OfferCard({ offer }: { offer: Offer }) {
+  return (
+    <div className="w-72 shrink-0 rounded-xl bg-card flex flex-col overflow-hidden border border-border">
+      <div className="p-5 flex-1">
+        <div className="mb-3">
+          <div className="w-16 h-16 rounded-xl overflow-hidden">
+            <img src={offer.logo} alt={offer.name} className="w-full h-full object-cover" />
+          </div>
+        </div>
+        <h3 className="text-base mb-0.5 text-foreground" style={headingBase}>{offer.name}</h3>
+        <p className="text-xl text-foreground mb-3">
+          <span style={headingBase}>{offer.cashback.replace(' cashback', '')} </span>
+          <span style={headingAccent}>cashback</span>
+        </p>
+        <p className="text-sm text-muted-foreground mb-4">{offer.desc}</p>
+        <ul className="text-xs text-muted-foreground space-y-1 mb-4">
+          {offer.features.map((f) => <li key={f}>✓ {f}</li>)}
+          <li>⚠ {offer.note}</li>
+        </ul>
+      </div>
+      <div className="p-5 pt-0">
+        <Button className="w-full h-9 text-sm">Claim Cashback</Button>
+      </div>
+    </div>
+  )
+}
 
 export function Offers() {
   return (
-    <section className="border-b">
-      <div className="container py-14 md:py-16">
-        <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl text-foreground" style={headingWrap}>
-            <span style={headingBase}>Start earning cashback </span>
-            <span style={headingAccent}>today</span>
-          </h2>
-        </div>
+    <section className="border-b py-14 md:py-16 overflow-hidden">
+      <div className="container mb-8">
+        <h2 className="text-2xl md:text-3xl text-foreground" style={headingWrap}>
+          <span style={headingBase}>Start earning cashback </span>
+          <span style={headingAccent}>today</span>
+        </h2>
+      </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {offers.map((offer) => (
-            <div
-              key={offer.name}
-              className="rounded-xl bg-card flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 border border-border"
-            >
-              <div className="p-5 flex-1">
-                <div className="mb-3">
-                  <div className="w-16 h-16 rounded-xl overflow-hidden">
-                    <img src={offer.logo} alt={offer.name} className="w-full h-full object-cover" />
-                  </div>
-                </div>
-                <h3 className="text-base mb-0.5 text-foreground" style={headingBase}>{offer.name}</h3>
-                <p className="text-xl text-foreground mb-3">
-                  <span style={headingBase}>{offer.cashback.replace(' cashback', '')} </span>
-                  <span style={headingAccent}>cashback</span>
-                </p>
-                <p className="text-sm text-muted-foreground mb-4">{offer.desc}</p>
-                <ul className="text-xs text-muted-foreground space-y-1 mb-4">
-                  {offer.features.map((f) => <li key={f}>✓ {f}</li>)}
-                  <li>⚠ {offer.note}</li>
-                </ul>
-              </div>
-              <div className="p-5 pt-0">
-                <Button className="w-full h-9 text-sm">Claim Cashback</Button>
-              </div>
-            </div>
+      {/* Marquee ticker */}
+      <div className="relative">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent" />
+
+        <div className="flex animate-marquee gap-5 w-max">
+          {[...offers, ...offers].map((offer, i) => (
+            <OfferCard key={`${offer.name}-${i}`} offer={offer} />
           ))}
         </div>
+      </div>
 
-        <div className="mt-6 rounded-xl border border-dashed border-border bg-card px-5 py-4 flex items-center gap-5">
+      <div className="container mt-6">
+        <div className="rounded-xl border border-dashed border-border bg-card px-5 py-4 flex items-center gap-5">
           <div className="flex -space-x-2 shrink-0">
             {[0,1,2,3].map((i) => (
               <div key={i} className="w-9 h-9 rounded-full bg-muted border-2 border-background flex items-center justify-center text-muted-foreground text-sm">
