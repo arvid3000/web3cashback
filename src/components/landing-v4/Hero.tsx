@@ -16,6 +16,30 @@ export function Hero() {
   const contentRef = useRef<HTMLDivElement>(null)
   const coinRef    = useRef<HTMLImageElement>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
+  const cardRef    = useRef<HTMLDivElement>(null)
+
+  // 3D tilt on hover
+  useEffect(() => {
+    const card = cardRef.current
+    if (!card) return
+
+    const onMouseMove = (e: MouseEvent) => {
+      const rect = card.getBoundingClientRect()
+      const x = (e.clientX - rect.left) / rect.width  - 0.5  // -0.5 to 0.5
+      const y = (e.clientY - rect.top)  / rect.height - 0.5
+      card.style.transform = `perspective(1200px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`
+    }
+    const onMouseLeave = () => {
+      card.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg)`
+    }
+
+    card.addEventListener("mousemove", onMouseMove)
+    card.addEventListener("mouseleave", onMouseLeave)
+    return () => {
+      card.removeEventListener("mousemove", onMouseMove)
+      card.removeEventListener("mouseleave", onMouseLeave)
+    }
+  }, [])
 
   useEffect(() => {
     const onScroll = () => {
@@ -36,7 +60,11 @@ export function Hero() {
 
   return (
     <div className="px-8 pt-6 pb-0 max-w-6xl mx-auto" ref={sectionRef}>
-      <div className="relative rounded-2xl overflow-hidden border border-white/10 md:aspect-[85.6/48] flex flex-col">
+      <div
+        ref={cardRef}
+        className="relative rounded-2xl overflow-hidden border border-white/10 md:aspect-[85.6/48] flex flex-col"
+        style={{ transition: 'transform 0.15s ease-out', transformStyle: 'preserve-3d' }}
+      >
 
         {/* Background layer */}
         <div ref={bgRef} className="absolute inset-0 will-change-transform">
