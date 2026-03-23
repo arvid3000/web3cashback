@@ -59,10 +59,10 @@ export function WhySection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {features.map((f) => (
             <div key={f.title} className="p-5 rounded-xl border">
-              <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center mb-3 overflow-hidden">
+              <div className="mb-3">
                 {f.image
-                  ? <img src={f.image} alt={f.title} className="w-full h-full object-cover" />
-                  : <f.icon className="h-5 w-5 text-[#4A52B8]" />
+                  ? <img src={f.image} alt={f.title} className="w-10 h-10 object-contain" />
+                  : <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center"><f.icon className="h-5 w-5 text-[#4A52B8]" /></div>
                 }
               </div>
               <h3 className="font-bold text-sm mb-1 text-foreground">{f.title}</h3>
