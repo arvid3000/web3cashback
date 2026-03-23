@@ -102,19 +102,21 @@ export function Offers() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-xl bg-muted/50 p-5 flex flex-wrap gap-8 justify-center">
-          {[
-            { value: "6+", label: "Vetted Partners" },
-            { value: "18%", label: "Max Cashback Rate" },
-            { value: "4", label: "Loyalty Tiers" },
-            { value: "$0", label: "Cost to You" },
-            { value: "12", label: "New partnerships launching" },
-          ].map((s) => (
-            <div key={s.label} className="text-center">
-              <p className="text-2xl text-foreground" style={interRegular}>{s.value}</p>
-              <p className="text-xs text-muted-foreground mt-0.5" style={interRegular}>{s.label}</p>
-            </div>
-          ))}
+        <div className="mt-6 rounded-xl border border-dashed border-border bg-card px-5 py-4 flex items-center gap-5">
+          <div className="flex -space-x-2 shrink-0">
+            {[0,1,2,3].map((i) => (
+              <div key={i} className="w-9 h-9 rounded-full bg-muted border-2 border-background flex items-center justify-center text-muted-foreground text-sm">
+                +
+              </div>
+            ))}
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-foreground" style={interRegular}>100+ brands coming soon</p>
+            <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1" style={interRegular}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              New crypto partnerships launching within the next 12 months
+            </p>
+          </div>
         </div>
       </div>
     </section>
