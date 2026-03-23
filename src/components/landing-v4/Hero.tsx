@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react"
 import { ArrowRight, UserCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { GradientBg } from "@/components/GradientBg"
 import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 import { Link } from "react-router-dom"
