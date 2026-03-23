@@ -7,7 +7,6 @@ interface Offer {
   desc: string
   features: string[]
   note: string
-  popular?: boolean
 }
 
 const offers: Offer[] = [
@@ -18,7 +17,6 @@ const offers: Offer[] = [
     desc: "Provably fair games with instant crypto withdrawals. Top-rated crypto casino.",
     features: ["Provably fair games", "Instant crypto withdrawals"],
     note: "Min. $50 deposit required",
-    popular: true,
   },
   {
     logo: "/betsio.svg",
@@ -62,44 +60,37 @@ const offers: Offer[] = [
   },
 ]
 
-const badge = "bg-black text-white border border-black"
+const interRegular: React.CSSProperties = { fontFamily: "'Inter', sans-serif", fontWeight: 400 }
+const playfairItalic: React.CSSProperties = { fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400 }
 
 export function Offers() {
   return (
     <section className="border-b">
       <div className="container py-14 md:py-16">
         <div className="mb-8">
-          <p className="text-sm font-semibold text-foreground uppercase tracking-widest mb-2">Available Offers</p>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">Start earning cashback today</h2>
+          <p className="text-sm uppercase tracking-widest mb-2 text-foreground" style={interRegular}>Available Offers</p>
+          <h2 className="text-2xl md:text-3xl text-foreground" style={interRegular}>Start earning cashback today</h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {offers.map((offer) => (
             <div
               key={offer.name}
-              className="relative rounded-xl bg-card flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 border border-border"
+              className="rounded-xl bg-card flex flex-col overflow-hidden hover:shadow-lg transition-all duration-200 border border-border"
             >
-              {offer.popular && (
-                <div className="absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-black px-2.5 py-1 text-[11px] font-medium text-white">
-                  ⭐ Popular
-                </div>
-              )}
               <div className="p-5 flex-1">
-                <div className="flex items-center gap-3 mb-3">
+                <div className="mb-3">
                   <div className="w-10 h-10 rounded-lg bg-[#111] flex items-center justify-center overflow-hidden">
                     <img src={offer.logo} alt={offer.name} className="w-8 h-8 object-contain" />
                   </div>
-                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${badge}`}>
-                    Casino
-                  </span>
                 </div>
-                <h3 className="font-bold text-base mb-0.5 text-foreground">{offer.name}</h3>
+                <h3 className="text-base mb-0.5 text-foreground" style={interRegular}>{offer.name}</h3>
                 <p className="text-xl text-foreground mb-3">
-                  {offer.cashback.replace(' cashback', '')}{' '}
-                  <span style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400 }}>cashback</span>
+                  <span style={interRegular}>{offer.cashback.replace(' cashback', '')} </span>
+                  <span style={playfairItalic}>cashback</span>
                 </p>
-                <p className="text-sm text-muted-foreground mb-4">{offer.desc}</p>
-                <ul className="text-xs text-muted-foreground space-y-1 mb-4" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
+                <p className="text-sm text-muted-foreground mb-4" style={interRegular}>{offer.desc}</p>
+                <ul className="text-xs text-muted-foreground space-y-1 mb-4" style={interRegular}>
                   {offer.features.map((f) => <li key={f}>✓ {f}</li>)}
                   <li>⚠ {offer.note}</li>
                 </ul>
@@ -120,8 +111,8 @@ export function Offers() {
             { value: "12", label: "New partnerships launching" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <p className="text-2xl font-extrabold text-foreground">{s.value}</p>
-              <p className="text-xs text-muted-foreground mt-0.5">{s.label}</p>
+              <p className="text-2xl text-foreground" style={interRegular}>{s.value}</p>
+              <p className="text-xs text-muted-foreground mt-0.5" style={interRegular}>{s.label}</p>
             </div>
           ))}
         </div>
