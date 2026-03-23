@@ -81,7 +81,7 @@ export function WhySection() {
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #1d1854ee 40%, transparent 100%)' }} />
               )}
               <div className="relative z-10">
-                <h3 className={`text-sm mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
+                <h3 className={`text-xl mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
                   <span style={headingBase}>{f.titleBase}</span>
                   <span style={headingAccent}>{f.titleAccent}</span>
                 </h3>
