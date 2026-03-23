@@ -1,5 +1,6 @@
 import { Search, UserPlus, CreditCard, Users } from "lucide-react"
 import { GradientBg } from "@/components/GradientBg"
+import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
 const steps = [
   {
@@ -35,7 +36,10 @@ export function HowItWorks() {
       <div className="relative z-10 container py-16 md:py-24">
         <div className="text-center mb-14">
           <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-3">How It Works</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">Four simple steps to start earning</h2>
+          <h2 className="text-3xl md:text-4xl text-white" style={headingWrap}>
+            <span style={headingBase}>Four simple steps to </span>
+            <span style={headingAccent}>start earning</span>
+          </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {steps.map((step) => (
