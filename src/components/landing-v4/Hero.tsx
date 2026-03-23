@@ -18,10 +18,10 @@ export function Hero() {
         />
 
         {/* Inner layout: nav top, text bottom */}
-        <div className="relative z-10 flex flex-col flex-1 justify-between px-10">
+        <div className="relative z-10 flex flex-col flex-1 justify-between p-10">
 
           {/* Top nav */}
-          <div className="flex items-center justify-between pt-6">
+          <div className="flex items-center justify-between">
             <Link to="/">
               <img src="/w3c-logo.svg" alt="Web3Cashback" className="h-6" style={{ filter: 'brightness(0) invert(1)' }} />
             </Link>
@@ -31,7 +31,7 @@ export function Hero() {
           </div>
 
           {/* Text — anchored to bottom */}
-          <div className="md:w-1/2 pb-10">
+          <div className="md:w-1/2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white leading-[1.1]" style={headingWrap}>
               <span style={headingAccent}>Earn crypto</span>{" "}
               <span style={headingBase}>on every bet, trade &amp; transaction</span>
