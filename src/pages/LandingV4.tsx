@@ -1,6 +1,5 @@
 import { Header } from "@/components/landing-v4/Header"
 import { Hero } from "@/components/landing-v4/Hero"
-import { FeaturedOn } from "@/components/landing-v4/FeaturedOn"
 import { Offers } from "@/components/landing-v4/Offers"
 import { HowItWorks } from "@/components/landing-v4/HowItWorks"
 import { WhySection } from "@/components/landing-v4/WhySection"
@@ -14,7 +13,6 @@ export function LandingV4() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <FeaturedOn />
         <Offers />
         <HowItWorks />
         <WhySection />

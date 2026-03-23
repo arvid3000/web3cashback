@@ -1,9 +1,15 @@
 import { useEffect, useRef } from "react"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, UserCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { GradientBg } from "@/components/GradientBg"
 import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 import { Link } from "react-router-dom"
+
+const featuredLogos = [
+  { src: "/brands/ccn-logo.svg", alt: "CCN" },
+  { src: "/brands/cm.svg",       alt: "CoinMarketCap" },
+  { src: "/brands/webo.svg",     alt: "Webo" },
+]
 
 export function Hero() {
   const bgRef      = useRef<HTMLDivElement>(null)
@@ -16,9 +22,8 @@ export function Hero() {
       const section = sectionRef.current
       if (!section) return
       const rect = section.getBoundingClientRect()
-      // Only apply while hero is visible
       if (rect.bottom < 0) return
-      const scrolled = -rect.top // px scrolled past hero top
+      const scrolled = -rect.top
 
       if (bgRef.current)      bgRef.current.style.transform      = `translateY(${scrolled * 0.15}px)`
       if (contentRef.current) contentRef.current.style.transform = `translateY(${scrolled * 0.07}px)`
@@ -47,7 +52,7 @@ export function Hero() {
           style={{ transform: 'translate(28%, 12%)' }}
         />
 
-        {/* Content layer — slowest parallax */}
+        {/* Content layer */}
         <div ref={contentRef} className="relative z-10 flex flex-col flex-1 justify-between p-10 will-change-transform">
 
           {/* Top nav */}
@@ -55,28 +60,49 @@ export function Hero() {
             <Link to="/">
               <img src="/w3c-logo.svg" alt="Web3Cashback" className="h-6" style={{ filter: 'brightness(0) invert(1)' }} />
             </Link>
-            <Button variant="outline" size="sm" className="text-white border-white/40 hover:bg-white/10 hover:text-white bg-transparent">
-              Sign Up
-            </Button>
+            <button className="flex items-center gap-2 text-white/80 hover:text-white text-sm transition-colors">
+              <UserCircle className="w-5 h-5" />
+              Log in
+            </button>
           </div>
 
-          {/* Text — anchored to bottom */}
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1]" style={headingWrap}>
-              <span style={headingAccent}>Earn crypto</span>{" "}
-              <span style={headingBase}>on every bet, trade &amp; transaction</span>
-            </h1>
-            <p className="text-white/70 mt-4 text-lg leading-relaxed max-w-md">
-              Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
-            </p>
-            <div className="mt-8">
-              <Button size="lg" className="px-8 h-12 text-base">
-                Start Earning
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+          {/* Bottom row: text left, featured on right */}
+          <div className="flex items-end justify-between">
+
+            {/* Text */}
+            <div className="md:w-1/2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1]" style={headingWrap}>
+                <span style={headingAccent}>Earn crypto</span>{" "}
+                <span style={headingBase}>on every bet, trade &amp; transaction</span>
+              </h1>
+              <p className="text-white/70 mt-4 text-lg leading-relaxed max-w-md">
+                Web3Cashback connects you to the top crypto platforms and pays you back every time you play or trade. Real revenue share, paid in USDC.
+              </p>
+              <div className="mt-8">
+                <Button size="lg" className="px-8 h-12 text-base">
+                  Start Earning
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </div>
-          </div>
 
+            {/* Featured on — bottom right inside hero */}
+            <div className="hidden md:flex flex-col items-end gap-3 pb-1">
+              <span className="text-xs text-white/50 uppercase tracking-widest">Featured on</span>
+              <div className="flex items-center gap-5">
+                {featuredLogos.map((logo) => (
+                  <img
+                    key={logo.alt}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-5 object-contain"
+                    style={{ filter: 'brightness(0) invert(1)', opacity: 0.7 }}
+                  />
+                ))}
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
