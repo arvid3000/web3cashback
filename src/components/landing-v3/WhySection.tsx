@@ -66,7 +66,7 @@ export function WhySection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {features.map((f) => (
             <div
-              key={f.title}
+              key={f.titleBase}
               className="p-5 rounded-xl border relative overflow-hidden aspect-square flex flex-col justify-end"
               style={f.bgImage ? { backgroundImage: `url(${f.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
             >
