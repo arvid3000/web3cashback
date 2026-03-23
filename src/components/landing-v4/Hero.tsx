@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 export function Hero() {
   return (
     <div className="px-8 pt-6 pb-0 bg-background max-w-6xl mx-auto">
-      <div className="relative rounded-2xl overflow-hidden border border-white/10 md:aspect-[85.6/53.98]">
+      <div className="relative rounded-2xl overflow-hidden border border-white/10 md:aspect-[85.6/48]">
         <GradientBg />
 
         {/* Mini nav inside hero */}
@@ -43,7 +43,7 @@ export function Hero() {
               <img
                 src="/coin.png"
                 alt="Coin"
-                className="w-[130%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[18%] translate-y-[12%]"
+                className="w-[160%] max-w-none object-contain drop-shadow-2xl animate-float translate-x-[22%] translate-y-[18%]"
               />
             </div>
           </div>
