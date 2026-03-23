@@ -104,7 +104,7 @@ export function Offers() {
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent" />
 
-        <div className="flex animate-marquee gap-5 w-max">
+        <div className="flex animate-marquee gap-5 w-max px-8">
           {[...offers, ...offers].map((offer, i) => (
             <OfferCard key={`${offer.name}-${i}`} offer={offer} />
           ))}
