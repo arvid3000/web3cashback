@@ -74,7 +74,7 @@ export function WhySection() {
                 </div>
               )}
               {f.bgImage && (
-                <div className="absolute inset-0" style={{ background: '#1d1854bb' }} />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #1d1854ee 40%, transparent 100%)' }} />
               )}
               <div className="relative z-10">
                 <h3 className={`font-bold text-sm mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`}>{f.title}</h3>
