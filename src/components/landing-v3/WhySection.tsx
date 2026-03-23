@@ -61,7 +61,7 @@ export function WhySection() {
             <div key={f.title} className="p-5 rounded-xl border">
               <div className="mb-3">
                 {f.image
-                  ? <img src={f.image} alt={f.title} className="w-10 h-10 object-contain" />
+                  ? <img src={f.image} alt={f.title} className="w-16 h-16 object-contain" />
                   : <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center"><f.icon className="h-5 w-5 text-[#4A52B8]" /></div>
                 }
               </div>
