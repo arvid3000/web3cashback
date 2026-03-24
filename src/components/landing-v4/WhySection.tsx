@@ -33,18 +33,39 @@ const features = [
   },
 ]
 
-const cashbackTiers = [
-  { name: "Bronze", threshold: "≤ 500 USDC", reward: "Up to 10%", bg: "bg-[hsl(33,60%,93%)]", color: "text-[hsl(33,60%,50%)]" },
-  { name: "Silver", threshold: "> 500 USDC", reward: "Up to 15%", bg: "bg-[hsl(218,11%,93%)]", color: "text-[hsl(218,11%,55%)]" },
-  { name: "Gold", threshold: "> 2,500 USDC", reward: "Up to 20%", bg: "bg-[hsl(38,92%,93%)]", color: "text-[hsl(38,92%,45%)]" },
-  { name: "Supernova", threshold: "> 10,000 USDC", reward: "Up to 25%", bg: "bg-[hsl(235,60%,93%)]", color: "text-[#4A52B8]" },
-]
-
-const referralTiers = [
-  { name: "Bronze", rate: "20%", bg: "bg-[hsl(33,60%,93%)]" },
-  { name: "Silver", rate: "25%", bg: "bg-[hsl(218,11%,93%)]" },
-  { name: "Gold", rate: "30%", bg: "bg-[hsl(38,92%,93%)]" },
-  { name: "Supernova", rate: "40%", bg: "bg-[hsl(235,60%,93%)]" },
+const tiers = [
+  {
+    name: "Bronze",
+    threshold: "≤ 500 USDC earned",
+    cashback: "Up to 10%",
+    referral: "20%",
+    dot: "bg-[hsl(33,60%,80%)]",
+    accent: "hsl(33,60%,50%)",
+  },
+  {
+    name: "Silver",
+    threshold: "> 500 USDC earned",
+    cashback: "Up to 15%",
+    referral: "25%",
+    dot: "bg-[hsl(218,11%,75%)]",
+    accent: "hsl(218,11%,45%)",
+  },
+  {
+    name: "Gold",
+    threshold: "> 2,500 USDC earned",
+    cashback: "Up to 20%",
+    referral: "30%",
+    dot: "bg-[hsl(38,92%,70%)]",
+    accent: "hsl(38,92%,40%)",
+  },
+  {
+    name: "Supernova",
+    threshold: "> 10,000 USDC earned",
+    cashback: "Up to 25%",
+    referral: "40%",
+    dot: "bg-[hsl(235,60%,75%)]",
+    accent: "#bc3cc8",
+  },
 ]
 
 function FeatureCard({ f }: { f: typeof features[0] }) {
@@ -56,7 +77,7 @@ function FeatureCard({ f }: { f: typeof features[0] }) {
       {!f.bgImage && (
         <div className="mb-3">
           <div className="w-10 h-10 rounded-lg bg-[#4A52B8]/10 flex items-center justify-center">
-            <f.icon className="h-5 w-5 text-[#4A52B8]" />
+            <f.icon className="h-5 w-5 text-[#bc3cc8]" />
           </div>
         </div>
       )}
@@ -64,11 +85,11 @@ function FeatureCard({ f }: { f: typeof features[0] }) {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #1d1854ee 40%, transparent 100%)' }} />
       )}
       <div className="relative z-10">
-        <h3 className={`text-xl mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
+        <h3 className={`text-base mb-1 ${f.bgImage ? 'text-white' : 'text-foreground'}`} style={headingWrap}>
           <span style={headingBase}>{f.titleBase}</span>
           <span style={headingAccent}>{f.titleAccent}</span>
         </h3>
-        <p className={`text-sm leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-500 ease-out ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
+        <p className={`text-xs leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all duration-500 ease-out ${f.bgImage ? 'text-white/70' : 'text-muted-foreground'}`}>{f.desc}</p>
       </div>
     </div>
   )
@@ -79,7 +100,7 @@ export function WhySection() {
     <section className="border-b">
       <div className="container py-16 md:py-24">
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-3">Why Web3Cashback</p>
+          <p className="text-sm font-semibold text-[#bc3cc8] uppercase tracking-widest mb-3">Why Web3Cashback</p>
           <h2 className="text-3xl md:text-4xl text-foreground" style={headingWrap}>
             <span style={headingBase}>We're in this </span>
             <span style={headingAccent}>together</span>
@@ -90,69 +111,49 @@ export function WhySection() {
         </div>
 
         {/* Value props */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {features.map((f) => <FeatureCard key={f.titleBase} f={f} />)}
         </div>
 
-        {/* Loyalty table */}
-        <div className="mb-6 text-center">
-          <h3 className="text-lg font-bold text-foreground mb-2">More Activity → More Rewards</h3>
-          <p className="text-sm text-muted-foreground max-w-lg mx-auto mb-2">
-            Your status unlocks better cashback rates and referral rewards. We use the following formula:
-          </p>
-          <p className="text-sm font-medium text-foreground mb-8">
-            [Your cashback + your referral rewards] over the last rolling 12-month period.
+        {/* Tier heading */}
+        <div className="mb-10">
+          <h3 className="text-3xl md:text-4xl text-foreground mb-3" style={headingWrap}>
+            <span style={headingBase}>More activity, </span>
+            <span style={headingAccent}>more rewards</span>
+          </h3>
+          <p className="text-muted-foreground max-w-lg">
+            Your tier is based on your total cashback + referral rewards over the last 12 months.
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto rounded-xl border overflow-hidden mb-16">
-          <div className="overflow-x-auto">
-            <div className="min-w-[420px]">
-              <div className="grid grid-cols-3 bg-muted text-sm font-semibold text-muted-foreground">
-                <div className="px-4 py-3 border-r">Status</div>
-                <div className="px-4 py-3 border-r">Last 12m Rewards</div>
-                <div className="px-4 py-3">Cashback Rewards</div>
+        {/* Tier cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {tiers.map((tier) => (
+            <div key={tier.name} className="rounded-xl border bg-card p-6 flex flex-col gap-4">
+              {/* Dot + name */}
+              <div className="flex items-center gap-2">
+                <div className={cn("w-3 h-3 rounded-full shrink-0", tier.dot)} />
+                <span className="text-sm font-semibold text-foreground">{tier.name}</span>
               </div>
-              {cashbackTiers.map((tier, i) => (
-                <div key={tier.name} className={cn("grid grid-cols-3 text-sm", i < cashbackTiers.length - 1 && "border-b")}>
-                  <div className="px-4 py-3.5 border-r flex items-center gap-2 font-semibold text-foreground">
-                    <div className={cn("w-6 h-6 rounded-full", tier.bg)} />
-                    {tier.name}
-                  </div>
-                  <div className="px-4 py-3.5 border-r text-muted-foreground">{tier.threshold}</div>
-                  <div className="px-4 py-3.5 font-medium text-foreground">{tier.reward}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
-        {/* Referral table */}
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-extrabold text-foreground mb-3">Refer your friends to earn more</h3>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Earn up to 40% referral rewards based on your friends' cashback. The higher your status, the bigger your rewards.
-          </p>
-        </div>
+              {/* Threshold */}
+              <p className="text-xs text-muted-foreground">{tier.threshold}</p>
 
-        <div className="max-w-md mx-auto rounded-xl border overflow-hidden">
-          <div className="overflow-x-auto">
-            <div className="min-w-[320px]">
-              <div className="grid grid-cols-2 bg-muted text-sm font-semibold text-muted-foreground">
-                <div className="px-4 py-3 border-r">Status</div>
-                <div className="px-4 py-3">Referral Rewards</div>
+              {/* Cashback */}
+              <div>
+                <p className="text-xs text-muted-foreground mb-0.5">Cashback</p>
+                <p className="text-2xl font-semibold text-foreground" style={{ color: tier.accent }}>
+                  {tier.cashback}
+                </p>
               </div>
-              {referralTiers.map((tier, i) => (
-                <div key={tier.name} className={cn("grid grid-cols-2 text-sm", i < referralTiers.length - 1 && "border-b")}>
-                  <div className="px-4 py-3.5 border-r flex items-center gap-2 font-semibold text-foreground">
-                    <div className={cn("w-5 h-5 rounded-full", tier.bg)} />
-                    {tier.name}
-                  </div>
-                  <div className="px-4 py-3.5 font-medium text-foreground">{tier.rate}</div>
-                </div>
-              ))}
+
+              {/* Referral */}
+              <div>
+                <p className="text-xs text-muted-foreground mb-0.5">Referral rate</p>
+                <p className="text-lg font-semibold text-foreground">{tier.referral}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

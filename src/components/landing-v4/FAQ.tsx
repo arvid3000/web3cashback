@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { headingAccent, headingBase, headingWrap } from "@/lib/typography"
 
 const faqs = [
   {
@@ -29,17 +30,17 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="border-b">
-      <div className="container py-16 md:py-24">
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold text-[#4A52B8] uppercase tracking-widest mb-3">FAQ</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">Frequently asked questions</h2>
-        </div>
-        <div className="max-w-2xl mx-auto">
+    <section className="py-16 md:py-24">
+      <div className="container">
+        <h2 className="text-3xl md:text-4xl text-foreground mb-16" style={headingWrap}>
+          <span style={headingBase}>Frequently asked </span>
+          <span style={headingAccent}>questions</span>
+        </h2>
+        <div className="max-w-2xl">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, i) => (
               <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger className="text-left text-foreground font-semibold">
+                <AccordionTrigger className="text-left text-foreground" style={headingBase}>
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">

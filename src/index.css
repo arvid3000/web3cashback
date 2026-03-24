@@ -8,6 +8,33 @@
 @theme inline {
     --font-sans: 'Inter', sans-serif;
     --font-heading: 'Funnel Display', sans-serif;
+
+    /* Brand palette — #432ef5 */
+    --color-brand-50:  #f0f0ff;
+    --color-brand-100: #e4e2ff;
+    --color-brand-200: #ccc8fd;
+    --color-brand-300: #aca4fa;
+    --color-brand-400: #8876f7;
+    --color-brand-500: #6a52f6;
+    --color-brand-600: #432ef5;
+    --color-brand-700: #3221cc;
+    --color-brand-800: #2718a3;
+    --color-brand-900: #1c1280;
+    --color-brand-950: #0f0948;
+
+    /* Accent palette — #bc3cc8 */
+    --color-accent2-50:  #fdf0fe;
+    --color-accent2-100: #fae1fc;
+    --color-accent2-200: #f5c3f9;
+    --color-accent2-300: #ed93f3;
+    --color-accent2-400: #df5fe7;
+    --color-accent2-500: #bc3cc8;
+    --color-accent2-600: #9c2fa7;
+    --color-accent2-700: #7e2587;
+    --color-accent2-800: #671f6f;
+    --color-accent2-900: #541c5a;
+    --color-accent2-950: #380a3c;
+
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-card: var(--card);
@@ -34,40 +61,40 @@
 
 :root {
     /* Brand colours */
-    --cta-purple: #9B3FF0;     /* CTAs / primary actions */
-    --accent-blue: #4A52B8;    /* Accents, labels, highlights */
+    --cta-purple: #432ef5;
+    --accent-blue: #bc3cc8;
 
-    --background: #f7f7f7;
+    --background: #e4e8ef;
     --foreground: hsl(220, 26%, 12%);
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(220, 26%, 12%);
     --popover: hsl(0, 0%, 100%);
     --popover-foreground: hsl(220, 26%, 12%);
-    --primary: #9B3FF0;
+    --primary: #432ef5;
     --primary-foreground: hsl(0, 0%, 100%);
     --secondary: hsl(235, 20%, 93%);
     --secondary-foreground: hsl(220, 26%, 12%);
     --muted: hsl(235, 20%, 93%);
     --muted-foreground: hsl(235, 9%, 46%);
-    --accent: #4A52B8;
+    --accent: #bc3cc8;
     --accent-foreground: hsl(0, 0%, 100%);
     --destructive: hsl(0, 72%, 51%);
     --border: hsl(235, 13%, 91%);
     --input: hsl(235, 13%, 91%);
-    --ring: #9B3FF0;
+    --ring: #432ef5;
     --radius: 0.5rem;
 
-    /* All non-neutral category colours → blue */
-    --casino: #4A52B8;
-    --exchange: #4A52B8;
-    --defi: #4A52B8;
-    --wallet: #4A52B8;
+    /* All non-neutral category colours → brand */
+    --casino: #432ef5;
+    --exchange: #432ef5;
+    --defi: #432ef5;
+    --wallet: #432ef5;
 
-    /* Tier colours — bronze/silver/gold keep warmth, platinum → blue */
+    /* Tier colours — bronze/silver/gold keep warmth, platinum → brand */
     --tier-bronze: hsl(33, 60%, 50%);
     --tier-silver: hsl(218, 11%, 65%);
     --tier-gold: hsl(38, 92%, 50%);
-    --tier-platinum: #4A52B8;
+    --tier-platinum: #432ef5;
     --tier-bronze-bg: hsl(33, 60%, 93%);
     --tier-silver-bg: hsl(218, 11%, 93%);
     --tier-gold-bg: hsl(38, 92%, 93%);
@@ -84,14 +111,28 @@
     --wallet-border: hsl(235, 50%, 82%);
 }
 
+.dark {
+    --background: #060619;
+    --dot-color: rgba(255,255,255,0.12);
+    --foreground: hsl(220, 15%, 88%);
+    --card: hsl(220, 15%, 12%);
+    --card-foreground: hsl(220, 15%, 88%);
+    --popover: hsl(220, 15%, 12%);
+    --popover-foreground: hsl(220, 15%, 88%);
+    --secondary: hsl(220, 15%, 18%);
+    --secondary-foreground: hsl(220, 15%, 88%);
+    --muted: hsl(220, 15%, 18%);
+    --muted-foreground: hsl(220, 10%, 55%);
+    --border: hsl(220, 15%, 22%);
+    --input: hsl(220, 15%, 22%);
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50;
     }
     body {
         @apply bg-background text-foreground font-sans;
-        background-image: radial-gradient(circle, #c4c4c4 1.5px, transparent 1.5px);
-        background-size: 28px 28px;
     }
     h1, h2, h3 {
         font-family: var(--font-heading);
@@ -114,10 +155,42 @@
   100% { transform: translateX(-50%); }
 }
 .animate-marquee {
-  animation: marquee 80s linear infinite;
+  animation: marquee 160s linear infinite;
 }
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* ── Supernova card gradient ──────────────────────────────────────────── */
+@keyframes supernova-bg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes supernova-orb {
+  0%   { transform: translate(-10%, -10%) scale(1);   opacity: 0.5; }
+  33%  { transform: translate(20%, 10%)  scale(1.2);  opacity: 0.7; }
+  66%  { transform: translate(-5%, 25%)  scale(0.9);  opacity: 0.55; }
+  100% { transform: translate(-10%, -10%) scale(1);   opacity: 0.5; }
+}
+
+/* ── Step circle glow ─────────────────────────────────────────────────── */
+@keyframes step-glow {
+  0%, 15%, 100% {
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: none;
+    color: rgba(255,255,255,0.4);
+  }
+  30%, 50% {
+    border-color: rgba(155, 63, 240, 0.9);
+    box-shadow: 0 0 18px rgba(155, 63, 240, 0.55), 0 0 6px rgba(155, 63, 240, 0.9);
+    color: rgba(255,255,255,0.95);
+  }
+  70% {
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: none;
+    color: rgba(255,255,255,0.4);
+  }
 }
 
 /* ── Floating animation ───────────────────────────────────────────────── */
@@ -233,7 +306,7 @@
 
 @layer utilities {
     .text-gradient {
-        background: linear-gradient(135deg, #4A52B8 0%, #4A52B8 100%);
+        background: linear-gradient(135deg, #432ef5 0%, #bc3cc8 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;

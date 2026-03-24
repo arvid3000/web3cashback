@@ -65,24 +65,26 @@ function OfferCard({ offer }: { offer: Offer }) {
   return (
     <div className="w-72 shrink-0 rounded-xl bg-card flex flex-col overflow-hidden border border-border">
       <div className="p-5 flex-1">
-        <div className="mb-3">
-          <div className="w-16 h-16 rounded-xl overflow-hidden">
+        {/* Logo + name row */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-16 h-16 rounded-full overflow-hidden shrink-0">
             <img src={offer.logo} alt={offer.name} className="w-full h-full object-cover" />
           </div>
+          <h3 className="text-base text-foreground leading-tight" style={headingBase}>{offer.name}</h3>
         </div>
-        <h3 className="text-base mb-0.5 text-foreground" style={headingBase}>{offer.name}</h3>
+
         <p className="text-xl text-foreground mb-3">
           <span style={headingBase}>{offer.cashback.replace(' cashback', '')} </span>
           <span style={headingAccent}>cashback</span>
         </p>
         <p className="text-sm text-muted-foreground mb-4">{offer.desc}</p>
-        <ul className="text-xs text-muted-foreground space-y-1 mb-4">
+
+        <Button variant="outline" className="w-full h-9 text-sm mb-4 bg-transparent">Join to Start Earning</Button>
+
+        <ul className="text-xs text-muted-foreground space-y-1">
           {offer.features.map((f) => <li key={f}>✓ {f}</li>)}
           <li>⚠ {offer.note}</li>
         </ul>
-      </div>
-      <div className="p-5 pt-0">
-        <Button className="w-full h-9 text-sm">Claim Cashback</Button>
       </div>
     </div>
   )
@@ -90,21 +92,17 @@ function OfferCard({ offer }: { offer: Offer }) {
 
 export function Offers() {
   return (
-    <section className="border-b py-14 md:py-16 overflow-hidden">
+    <section className="py-14 md:py-16 overflow-hidden">
       <div className="container mb-8">
-        <h2 className="text-2xl md:text-3xl text-foreground" style={headingWrap}>
+        <h2 className="text-3xl md:text-4xl text-foreground" style={headingWrap}>
           <span style={headingBase}>Start earning cashback </span>
           <span style={headingAccent}>today</span>
         </h2>
       </div>
 
       {/* Marquee ticker */}
-      <div className="relative py-6">
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent" />
-
-        <div className="flex animate-marquee gap-5 w-max px-8">
+      <div className="relative py-10">
+<div className="flex animate-marquee gap-5 w-max px-8">
           {[...offers, ...offers].map((offer, i) => (
             <OfferCard key={`${offer.name}-${i}`} offer={offer} />
           ))}

@@ -7,7 +7,7 @@ export function FeaturedOn() {
 
   return (
     <div className="max-w-6xl mx-auto px-8 py-4 flex items-center gap-6">
-      <span className="text-sm shrink-0" style={{ color: '#9B3FF0' }}>Featured on</span>
+      <span className="text-sm shrink-0 text-brand-600">Featured on</span>
       <div className="flex items-center gap-8">
         {logos.map((logo) => (
           <img

@@ -4,26 +4,26 @@ const steps = [
   {
     num: "01",
     icon: Search,
-    title: "Choose an Offer",
-    desc: "Explore cashback deals from top crypto platforms, each one vetted by our team.",
+    title: "Your deal is waiting",
+    desc: "Every offer is hand-picked and vetted by our team. Browse, pick your platform, and click through.",
   },
   {
     num: "02",
     icon: UserPlus,
-    title: "Sign Up & Play",
-    desc: "Register through our link — tracking starts automatically. No codes needed.",
+    title: "Sign up. Cashback starts automatically.",
+    desc: "Register through our link and your earnings begin straight away. No promo codes, no manual claims.",
   },
   {
     num: "03",
     icon: CreditCard,
-    title: "Get Paid",
-    desc: "Withdraw your USDC earnings anytime — minimum 50 USDC.",
+    title: "Withdraw real USDC, anytime",
+    desc: "Your earnings build in the background. Hit 50 USDC and cash out whenever you want.",
   },
   {
     num: "04",
     icon: Users,
-    title: "Refer Friends To Earn More",
-    desc: "Share your referral link and earn up to 40% of your friends' cashback.",
+    title: "Then earn 40% of your friends' cashback too",
+    desc: "Share your referral link. Every time a friend earns, you get a cut on top of your own.",
   },
 ]
 
